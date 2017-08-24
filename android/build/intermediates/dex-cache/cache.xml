@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3135c4a5ece98038e9b026ce71e432942750d04c">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_e0c9f912141083040e5cf3c931a8260fed223f80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/.android/build-cache/98d0a3594eb38aa68550c9038bf85fec74cd2eb9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f66dccf471b94d5d28c54a6b8ca9e1668b0fb0ce">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_137289dd6acdc66614a1dbbec8640cc5f4bda771.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SmartStore/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3135c4a5ece98038e9b026ce71e432942750d04c">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_3d7301adbf5ce22a681241cd04686d6080180776.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/.android/build-cache/0853ddade43003ade8199f4dfd2c70db1d129c42/output/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_69414fb24c5ede1be0c4ebfdb7317fb4dd30fcec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a4c013738e6b045601b80013f2224fd61cc5428">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_e25f5cd7265d9bec78e37e83d279ef6cca648b98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/.android/build-cache/0853ddade43003ade8199f4dfd2c70db1d129c42/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f66dccf471b94d5d28c54a6b8ca9e1668b0fb0ce">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_019b01a1fc01020419c81387d25538605257873c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eaea891c23b6bbd5715e50e3f865d69028fe8d78">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_174067aceff068800e183f475cb5ed918735db8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceReact/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1d50b1ce05ca25362588970d815b327df9f1f9e8">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_3cfe5ed1a3dc737a6127b91cef8e90e939ce5ba6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/.android/build-cache/98d0a3594eb38aa68550c9038bf85fec74cd2eb9/output/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_9b84b4b8677263d3557072d247d9a480f5a35c2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/node_modules/react-native-vector-icons/android/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_107d2c3c44f9b075836ed8c2213b4691c1ed0f61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SmartSync/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a4c013738e6b045601b80013f2224fd61cc5428">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_ad37e6d0623f88aecabecb9924121fdc8491b6f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7f786c7991a5966ca84030b445a524f165f3be89">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_764345202944a4972c42772636eb5bf07becdfba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/node_modules/react-native-vector-icons/android/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_5becdeb6c25c2c43de1f559e2fa29a39ce226b20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceAnalytics/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="eaea891c23b6bbd5715e50e3f865d69028fe8d78">
+        <dex dex="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/pre-dexed/debug/classes_b408e9ab7e243dd9a2984940473c94494dc225c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7f786c7991a5966ca84030b445a524f165f3be89">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_cfefd5190e7ac1f83e115a8cf211ba1d366e95ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceReact/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1d50b1ce05ca25362588970d815b327df9f1f9e8">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/classes_a343968c7ce6b1e826399b731023cb6a3e553d89.jar" />
+    </item>
+
+</items>

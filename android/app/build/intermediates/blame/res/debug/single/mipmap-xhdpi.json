@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    }
+]

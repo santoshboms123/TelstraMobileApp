@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    }
+]

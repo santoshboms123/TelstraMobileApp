@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="account_type">au.com.telstra.login</string>
+	<string name="app_name">telstra</string>
+	<string name="app_package">au.com.telstra</string>
+</resources>
