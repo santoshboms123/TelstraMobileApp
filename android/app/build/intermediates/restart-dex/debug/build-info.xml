@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="26"
+    api-level="25"
     build-mode="FULL"
-    density="560dpi"
+    density="xhdpi"
     format="10"
     plugin-version="2.3.2"
-    timestamp="1503535563022"
-    token="-762742212369465968"
+    timestamp="1503541284101"
+    token="-5471268750610793164"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
@@ -18,73 +18,25 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="2534" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1389" />
 
     <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
         location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
         location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
         location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
         location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -95,70 +47,22 @@
 
     <build
         build-mode="FULL"
-        timestamp="1503535563022"
+        timestamp="1503541284101"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"

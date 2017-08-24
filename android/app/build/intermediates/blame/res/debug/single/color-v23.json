@@ -1,15 +1,7 @@
 [
     {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_seek_thumb.xml"
-    },
-    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
         "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_default.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
@@ -24,28 +16,12 @@
         "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_default.xml"
     },
     {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
         "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
         "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_spinner.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
@@ -56,19 +32,7 @@
         "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
         "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/color-v23/abc_tint_switch_track.xml"
     }
 ]

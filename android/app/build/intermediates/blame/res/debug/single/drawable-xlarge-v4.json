@@ -1,95 +1,39 @@
 [
     {
-        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__oauth_background.png",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__oauth_background.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__nav_shadow.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__nav_shadow.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__toolbar_background.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__toolbar_background.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__toolbar_background.xml",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__toolbar_background.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh_press.png",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_refresh_press.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_refresh.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_bg.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_bg.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh_states.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_refresh_states.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh_press.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_refresh_press.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__oauth_container_dropshadow.9.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__oauth_container_dropshadow.9.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_drop_shadow.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_drop_shadow.xml"
-    },
-    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__refresh_loader.png",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__refresh_loader.png"
+    },
+    {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__oauth_background.png",
+        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__oauth_background.png"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_left_border.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_left_border.xml"
     },
     {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__refresh_loader.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__refresh_loader.png"
-    },
-    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__login_content_header.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__login_content_header.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_left_border.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_left_border.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_right_border.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_right_border.xml"
     },
     {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__toolbar_background.xml",
+        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__toolbar_background.xml"
+    },
+    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__nav_shadow.png",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__nav_shadow.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__progress_spinner.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__progress_spinner.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__login_content_header.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__login_content_header.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_drop_shadow.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_drop_shadow.xml"
     },
     {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__oauth_background.png",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__oauth_background.png"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_right_border.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_right_border.xml"
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_refresh_press.png",
+        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/drawable-xlarge-v4/sf__header_refresh_press.png"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/drawable-xlarge-v4/sf__header_bg.png",

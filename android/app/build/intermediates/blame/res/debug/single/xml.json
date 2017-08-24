@@ -1,17 +1,5 @@
 [
     {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/xml/authenticator.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/authenticator.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/xml/app_restrictions.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/app_restrictions.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/xml/servers.xml",
-        "source": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/servers.xml"
-    },
-    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/xml/authenticator.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/authenticator.xml"
     },
@@ -26,9 +14,5 @@
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/xml/servers.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/servers.xml"
-    },
-    {
-        "merged": "/Users/pato/Documents/Telstra/Mobile/Telstra.1.0.1/telstra/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/pato/.android/build-cache/0853ddade43003ade8199f4dfd2c70db1d129c42/output/res/xml/preferences.xml"
     }
 ]
