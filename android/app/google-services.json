@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "801121151349",
+    "firebase_url": "https://telstrasalesforce.firebaseio.com",
+    "project_id": "telstrasalesforce",
+    "storage_bucket": "telstrasalesforce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801121151349:android:0a8e61920a8f051b",
+        "android_client_info": {
+          "package_name": "au.com.telstra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801121151349-219mr3jhh8s6ff51rfuk4asbpmvufbca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjGzZyvyNqr3h796t--qgqHf24llCjG3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
