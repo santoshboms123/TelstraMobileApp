@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/layout-v21/notification_action.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/pato/.android/build-cache/bbde345f6d91ce2aed01d00d30ec28178b92542a/output/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout-v21/notification_template_icon_group.xml"
     }
 ]

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-elements';
+import { StyleSheet, View } from 'react-native';
+import { Text, Button } from 'react-native-elements';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,11 +10,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
+  // welcome: {
+  //   fontSize: 20,
+  //   textAlign: 'center',
+  //   margin: 10,
+  // },
 });
 
 const LoginScreen = ({ navigation }) => (

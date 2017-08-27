@@ -43,6 +43,10 @@ import { createStore } from 'redux';
 
 import AppReducer from './src/reducers';
 import AppWithNavigationState from './src/navigators/AppNavigator';
+//import SideMenu from './src/components/SideMenuDraw';
+//import Drawer from 'react-native-drawer';
+import SplashScreen from 'react-native-splash-screen';
+import Firebase from "./src/firebase";
 
 class UserListScreen extends React.Component {
     store = createStore(AppReducer);
@@ -66,6 +70,9 @@ class UserListScreen extends React.Component {
                     (error) => console.log('Failed to authenticate:' + error)
                 );
             });
+           // Firebase.initialise();
+           // Firebase.messaging.subscribeToTopic('foobar');
+            Firebase.messaging().subscribeToTopic('Outage');
     }
 
     fetchData() {
@@ -74,6 +81,12 @@ class UserListScreen extends React.Component {
                   (response) => that.setState({data: response.records})
                  );
     }
+    closeControlPanel = () => {
+        this._drawer.close()
+      };
+      openControlPanel = () => {
+        this._drawer.open()
+      };
 
     render() {
         return (
@@ -85,7 +98,12 @@ class UserListScreen extends React.Component {
             //   />
             // </View>
             <Provider store={this.store}>
-                <AppWithNavigationState />
+               {/* <Drawer
+        ref={(ref) => this._drawer = ref}
+        content={<SideMenu />}
+        > */}
+                    <AppWithNavigationState />
+                    {/* </Drawer> */}
             </Provider>
         );
     }

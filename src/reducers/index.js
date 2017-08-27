@@ -30,12 +30,6 @@ export function reducer(state = initialState, action) {
 function nav(state = initialState, action) {
   let nextState;
   switch (action.type) {
-    // case '@@redux/INIT':
-    // nextState = AppNavigator.router.getStateForAction(
-    //   NavigationActions.navigate({ routeName: 'Main' }),
-    //   state
-    // );
-    // break;
     case 'Login':
       nextState = AppNavigator.router.getStateForAction(
         NavigationActions.back(),

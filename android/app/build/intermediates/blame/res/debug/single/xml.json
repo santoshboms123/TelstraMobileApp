@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/xml/authenticator.xml",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/authenticator.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SalesforceSDK/unspecified/res/xml/authenticator.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/xml/app_restrictions.xml",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/app_restrictions.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SalesforceSDK/unspecified/res/xml/app_restrictions.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/Users/pato/.android/build-cache/98d0a3594eb38aa68550c9038bf85fec74cd2eb9/output/res/xml/preferences.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.43.1/res/xml/preferences.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/xml/servers.xml",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/xml/servers.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SalesforceSDK/unspecified/res/xml/servers.xml"
     }
 ]

@@ -1,10 +1,10 @@
 [
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/menu/sf__login.xml",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/menu/sf__login.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SalesforceSDK/unspecified/res/menu/sf__login.xml"
     },
     {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/menu/sf__clear_custom_url.xml",
-        "source": "/Users/pato/Documents/TelstraMobileApp/mobile_sdk/salesforcemobilesdk-android/libs/SalesforceSDK/build/intermediates/bundles/default/res/menu/sf__clear_custom_url.xml"
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SalesforceSDK/unspecified/res/menu/sf__clear_custom_url.xml"
     }
 ]

@@ -46,7 +46,7 @@ public class MainActivity extends SalesforceReactActivity {
 	 */
 	@Override
 	protected String getMainComponentName() {
-		return "telstra";
+		return "Telstra";
 	}
 }
 
