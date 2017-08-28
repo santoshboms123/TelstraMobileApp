@@ -8,12 +8,21 @@ const styles = StyleSheet.create({
     flex: 1,  
     backgroundColor: '#FFFFFF',
     flexDirection: 'column',
+    padding: 8
   },
+  textTitle: {
+    fontSize: 32,
+    color: 'black'
+  },
+  bodyTitle: {
+    fontSize: 20,
+    color: 'black'
+  }
 });
 
 const Roaming = () => (
   <View style={styles.container} >
-  <View style={styles.display}>
+      <View style={styles.display}>
   <View style={{
       justifyContent: 'center',
       alignItems: 'center',
@@ -27,18 +36,41 @@ const Roaming = () => (
   <View style={styles.display}>
   <View style={{
       justifyContent: 'center',
-      alignItems: 'center',
+      alignItems: 'center'
     }}>
-    <Text>{DeviceInfo.getModel}</Text>
-  <Text>Copyright 2017</Text>
-  <Text>Telstra and Salesforce POC</Text>
-  </View></View>
+   <Text style={styles.textTitle}>International Day Pass</Text>
+  </View>
+  </View>
+  <View>
+    <Text style={styles.bodyTitle}>Your Current status of International Daily Pass Disabled</Text>
+    <Text style={styles.bodyTitle}>New Zealand $5</Text>
+    <Text style={styles.bodyTitle}>Other Country</Text>
+    <Button
+    raised
+    backgroundColor="#397af8"
+    style={{marginBottom: 8}}
+    title='Activate International Day Pass' />
+
+    <Text style={styles.textTitle}>International Roaming</Text>
+    <Text style={styles.bodyTitle}>Your Current status of International Roaming is Enabled</Text>
+    <Button
+    raised
+    backgroundColor="#397af8"
+    style={{marginBottom: 8}}
+    title='Deactivate International Day Pass' />
+
+  </View>
+  <Button
+    raised
+    backgroundColor="#397af8"
+    style={{marginBottom: 8}}
+    title='Data Usage' />
   </View>
 
 );
 
 Roaming.navigationOptions = {
-  title: 'Roaming',
+  title: 'Travel Pass',
 };
 
 export default Roaming;

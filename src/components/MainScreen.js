@@ -13,8 +13,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,  
     backgroundColor: '#FFFFFF',
-    flexDirection: 'column',
+    justifyContent: 'space-between'
   },
+  buttons: {
+    marginBottom: 12
+  }
 });
 
 const MainScreen =  ({ dispatch }) => (
@@ -30,17 +33,19 @@ const MainScreen =  ({ dispatch }) => (
       </Image>
   </View>
   </View>
-  <RoamingButton style={{marginBottom: 8}}/>
-  <OutageButton style={{marginBottom: 8}}/>
-  <BillingButton style={{marginBottom: 8}}/>
-  <AboutButton style={{marginBottom: 8}}/>
+  <RoamingButton style={styles.buttons}/>
+  <OutageButton style={styles.buttons}/>
+  <BillingButton style={styles.buttons}/>
+  <AboutButton style={styles.buttons}/>
   <View style={styles.display}>
   <View style={{
       justifyContent: 'center',
       alignItems: 'center',
+      marginBottom: 22
     }}>
-  <Text>Copyright 2017</Text>
-  <Text>Telstra and Salesforce POC</Text>
+  <Text>© Copyright 2017</Text>
+  <Text>Telstra and Salesforce</Text>
+  <Text>POC Version 3</Text>
   </View></View>
   </View>
 );

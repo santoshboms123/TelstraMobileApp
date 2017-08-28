@@ -1,9 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-//import { Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-elements';
 import { NavigationActions } from 'react-navigation';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,  
+    backgroundColor: '#FFFFFF',
+  },
+  buttons: {
+    marginBottom: 20
+  }
+});
 
 const BillingButton = ({ billing }) => (
     <Button

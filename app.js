@@ -30,6 +30,7 @@ import {
     Text,
     View,
     FlatList,
+    TouchableOpacity,
 } from 'react-native';
 
 
@@ -40,13 +41,15 @@ import {oauth, net} from 'react-native-force';
 // import PageTwo from './components/PageTwo';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-
+import SideMenu from 'react-native-simple-drawer';
 import AppReducer from './src/reducers';
 import AppWithNavigationState from './src/navigators/AppNavigator';
 //import SideMenu from './src/components/SideMenuDraw';
 //import Drawer from 'react-native-drawer';
 import SplashScreen from 'react-native-splash-screen';
 import Firebase from "./src/firebase";
+import SideBar from "./src/components/SideBar";
+import Hamburger from 'react-native-hamburger';
 
 class UserListScreen extends React.Component {
     store = createStore(AppReducer);
@@ -89,6 +92,16 @@ class UserListScreen extends React.Component {
       };
 
     render() {
+        const menu = (
+                    <View style={styles.container}>
+              <FlatList
+                data={this.state.data}
+                renderItem={({item}) => <Text style={styles.item}>{item.Name}</Text>}
+                keyExtractor={(item, index) => index}
+              />
+            </View>
+            
+         )
         return (
             // <View style={styles.container}>
             //   <FlatList
@@ -97,14 +110,29 @@ class UserListScreen extends React.Component {
             //     keyExtractor={(item, index) => index}
             //   />
             // </View>
-            <Provider store={this.store}>
-               {/* <Drawer
-        ref={(ref) => this._drawer = ref}
-        content={<SideMenu />}
-        > */}
-                    <AppWithNavigationState />
-                    {/* </Drawer> */}
-            </Provider>
+            
+
+          
+                    <Provider store={this.store}>
+                    <SideMenu
+                 ref="menu"
+                 menu={menu}>
+                 <View>
+                     <TouchableOpacity onPress={() => this.refs.menu.open()}>
+                         {/* <Text>Toggle Menu</Text> */}
+                         <Hamburger/>
+                     </TouchableOpacity>
+                        
+
+                 </View>
+                 <AppWithNavigationState />
+             </SideMenu>
+            
+                    </Provider>
+
+
+
+
         );
     }
 }

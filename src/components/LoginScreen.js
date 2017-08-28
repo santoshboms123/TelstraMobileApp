@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    justifyContent: 'space-between'
   },
   // welcome: {
   //   fontSize: 20,
