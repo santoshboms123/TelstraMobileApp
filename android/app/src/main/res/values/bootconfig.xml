@@ -2,7 +2,7 @@
 
 <resources>
     <string name="remoteAccessConsumerKey">3MVG959Nd8JMmavQd4.gdorbh30FbmiO.cfL0da03X96t9yZfFXiRyvO_AJtxbHgLCzBEL8wwjxPVmzgE_6eK</string>
-    <string name="oauthRedirectURI">https://test.salesforce.com/services/oauth2/success</string>
+    <string name="oauthRedirectURI">https://telstralready--RETAILPOC.cs57.my.salesforce.com/services/oauth2/success</string>
     <string-array name="oauthScopes">
         <item>api</item>
     </string-array>

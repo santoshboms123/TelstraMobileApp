@@ -17,7 +17,11 @@ const styles = StyleSheet.create({
   },
   buttons: {
     marginBottom: 12
-  }
+  },
+  textTitle: {
+      fontSize: 32,
+      color: 'black'
+    },
 });
 
 const MainScreen =  ({ dispatch }) => (
@@ -31,6 +35,7 @@ const MainScreen =  ({ dispatch }) => (
           source={require('../../Telstra.png')}
           style={styles.image}>
       </Image>
+      <Text style={styles.textTitle}>Welcome @username</Text>
   </View>
   </View>
   <RoamingButton style={styles.buttons}/>

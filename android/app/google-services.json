@@ -1,7 +1,7 @@
 {
   "project_info": {
     "project_number": "801121151349",
-    "firebase_url": "https://telstrasalesforce.firebaseio.com",
+    "firebase_url": "https://fcm.googleapis.com/",
     "project_id": "telstrasalesforce",
     "storage_bucket": "telstrasalesforce.appspot.com"
   },
@@ -21,7 +21,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCjGzZyvyNqr3h796t--qgqHf24llCjG3s"
+          "current_key": "AIzaSyAZv6auxUHDp9w00JP0KNetMEPbUYfBvhw"
         }
       ],
       "services": {

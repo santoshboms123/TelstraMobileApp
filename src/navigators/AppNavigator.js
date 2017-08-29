@@ -15,11 +15,11 @@ export const AppNavigator = StackNavigator({
   Main: { screen: MainScreen },
   Login: { screen: LoginScreen },
   Profile: { screen: ProfileScreen },
-  About: {screen: About},
+  About: {screen: About, navigationOptions:{ttile: 'About'}},
   Roaming: {screen: Roaming},
   Outage: {screen: Outage},
   Billing: {screen: Billing},
-});
+},{ headerMode: 'none' });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
   <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />

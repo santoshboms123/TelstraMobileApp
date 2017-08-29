@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <servers>
-    <server name="Telstra Login" url="https://retailpoc-telstraretailpoc.cs57.force.com"/>
+    <server name="Telstra Login" url="https://telstralready--RETAILPOC.cs57.my.salesforce.com/"/>
     <!-- https://retailpoc-telstraretailpoc.cs57.force.com -->
 </servers>

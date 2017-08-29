@@ -23,14 +23,7 @@ import RNFirebase from 'react-native-firebase'
 
 const configurationOptions = {
   debug: true,
-  apiKey: "AIzaSyBbNLZpMMAYhUkKjLwuu7uOprgMqtu-xjo",
-  authDomain: "telstrasalesforce.firebaseapp.com",
-  databaseURL: "https://telstrasalesforce.firebaseio.com",
-  projectId: "telstrasalesforce",
-  storageBucket: "telstrasalesforce.appspot.com",
-  messagingSenderId: "801121151349"
 }
-
 const firebase = RNFirebase.initializeApp(configurationOptions)
 
 export default firebase
@@ -40,3 +33,11 @@ export default firebase
 //export default firebased;
 
 //module.exports = Firebase;
+
+
+// apiKey: "AIzaSyBbNLZpMMAYhUkKjLwuu7uOprgMqtu-xjo",
+// authDomain: "telstrasalesforce.firebaseapp.com",
+// databaseURL: "https://telstrasalesforce.firebaseio.com",
+// projectId: "telstrasalesforce",
+// storageBucket: "telstrasalesforce.appspot.com",
+// messagingSenderId: "801121151349"

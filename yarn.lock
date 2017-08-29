@@ -3315,6 +3315,12 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-appstate-listener@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-appstate-listener/-/react-native-appstate-listener-1.0.0.tgz#b6c596839fdb6f5ab448b27ca928c98fa866b22f"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-device-info@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-0.11.0.tgz#e96dd0e3f8a7d7e3022c1f441f51fa912fdc7444"

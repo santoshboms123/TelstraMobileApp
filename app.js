@@ -31,6 +31,9 @@ import {
     View,
     FlatList,
     TouchableOpacity,
+    Linking,
+    Image,
+    AppState
 } from 'react-native';
 
 
@@ -48,19 +51,27 @@ import AppWithNavigationState from './src/navigators/AppNavigator';
 //import Drawer from 'react-native-drawer';
 import SplashScreen from 'react-native-splash-screen';
 import Firebase from "./src/firebase";
-import SideBar from "./src/components/SideBar";
+//import SideBar from "./src/components/MainScreen";
 import Hamburger from 'react-native-hamburger';
+
+import LoginStatusMessage from './src/components/LoginStatusMessage';
+import AuthButton from './src/components/AuthButton';
+import AboutButton from './src/components/AboutButton';
+import RoamingButton from './src/components/RoamingButton';
+import OutageButton from './src/components/OutageButton';
+import BillingButton from './src/components/BillingButton';
+import { Button } from 'react-native-elements';
 
 class UserListScreen extends React.Component {
     store = createStore(AppReducer);
 
     static navigationOptions = {
-        title: 'Telstra'
+        header: { visible:false } 
     };
 
     constructor(props) {
         super(props);
-        this.state = {data: []};
+        this.state = {data: [], active:false};
     }
     
     componentDidMount() {
@@ -73,9 +84,21 @@ class UserListScreen extends React.Component {
                     (error) => console.log('Failed to authenticate:' + error)
                 );
             });
+            alert(Linking.getInitialURL());
+            const url = Linking.getInitialURL().then(url => {
+                debugger
+                if (url) {
+                  const route = url.replace(/.*?:\/\//g, "");
+                  console.log(route);
+                  alert(route);
+                  //this._navigator.replace(this.state.routes[route]);
+                }
+              });
+
            // Firebase.initialise();
            // Firebase.messaging.subscribeToTopic('foobar');
             Firebase.messaging().subscribeToTopic('Outage');
+           // Firebase.messaging().setBadgeNumber(3);
     }
 
     fetchData() {
@@ -90,15 +113,53 @@ class UserListScreen extends React.Component {
       openControlPanel = () => {
         this._drawer.open()
       };
+      
+ 
 
     render() {
+        onHamburger = () => {
+            //this.setState({active: !this.state.active});
+            // if(this.state.active)
+            //   this.refs.menu.close();
+            // else
+            this.setState({active: false});
+              this.refs.menu.open();
+        }
         const menu = (
-                    <View style={styles.container}>
-              <FlatList
-                data={this.state.data}
-                renderItem={({item}) => <Text style={styles.item}>{item.Name}</Text>}
-                keyExtractor={(item, index) => index}
-              />
+            //         <View style={styles.container}>
+            //   <FlatList
+            //     data={this.state.data}
+            //     renderItem={({item}) => <Text style={styles.item}>{item.Name}</Text>}
+            //     keyExtractor={(item, index) => index}
+            //   />
+            // </View>
+
+            <View style={styles.container} >
+            <View style={styles.display}>
+            <View style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+                <Image
+                    source={require('./Telstra.png')}
+                    style={styles.image}>
+                </Image>
+            </View>
+            </View>
+            <RoamingButton style={styles.buttons}/>
+            <OutageButton style={styles.buttons}/>
+            <BillingButton style={styles.buttons}/>
+            <AboutButton style={styles.buttons}/>
+            <View style={styles.display}>
+            <View style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginBottom: 22
+              }}>
+            <Text>© Copyright 2017</Text>
+            <Text>Telstra and Salesforce</Text>
+            <Text>POC Version 3</Text>
+            </View></View>
             </View>
             
          )
@@ -117,10 +178,10 @@ class UserListScreen extends React.Component {
                     <SideMenu
                  ref="menu"
                  menu={menu}>
-                 <View>
-                     <TouchableOpacity onPress={() => this.refs.menu.open()}>
-                         {/* <Text>Toggle Menu</Text> */}
-                         <Hamburger/>
+                 <View style={{ justifyContent: 'flex-end', backgroundColor: 'white', borderBottomWidth: 1 }}>
+                     <TouchableOpacity onPress={onHamburger} >
+                         {/* <Hamburger type="spinArrow" active={false} onPress={onHamburger}/> */}
+                         <Image active={false} source={require('./Hamburger.png')}/>
                      </TouchableOpacity>
                         
 
@@ -142,6 +203,7 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 22,
         backgroundColor: 'white',
+        justifyContent: 'space-between'
     },
     item: {
         padding: 10,
@@ -150,10 +212,4 @@ const styles = StyleSheet.create({
     }
 });
 
-// export const App = StackNavigator({
-//     UserList: { screen: UserListScreen }
-// });
-
 export const App = UserListScreen;
-
-
