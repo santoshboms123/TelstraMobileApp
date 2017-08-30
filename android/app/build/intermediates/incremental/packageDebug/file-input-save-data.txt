@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Aug 29 16:22:20 AEST 2017
+#Wed Aug 30 17:41:38 AEST 2017
 20.base=/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/resources-debug.ap_
 143.base=/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/resources-debug.ap_
 493.base=/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/resources-debug.ap_

@@ -94,11 +94,12 @@ public class MainApplication extends Application implements ReactApplication {
 	public ReactNativeHost getReactNativeHost() {
 		return mReactNativeHost;
 	}
-
+	static public TelstraPushNotification rp = new TelstraPushNotification ();;
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		SalesforceReactSDKManager.initReactNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);
+		SalesforceReactSDKManager.getInstance().setPushNotificationReceiver(rp);
 	}
 }
 

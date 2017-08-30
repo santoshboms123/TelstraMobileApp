@@ -24,10 +24,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+import React from 'react';
 import { AppRegistry } from 'react-native';
-import { App } from './app.js';
+import App from './app.js';
+import { Provider } from "react-redux";
+import store from './src/store';
 
-AppRegistry.registerComponent('Telstra', () => App);
+const Wrapper = () => (
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
+
+AppRegistry.registerComponent('Telstra', () => Wrapper);
 
 
 

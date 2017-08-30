@@ -4,8 +4,14 @@ import android.os.Bundle;
 
 import com.salesforce.androidsdk.push.PushNotificationInterface;
 
-public class telstraPushNotification implements ReactApplication {
+public class TelstraPushNotification implements PushNotificationInterface {
 
-public interface IPushNotificationInterface {
-    public void onPushMessageReceived(Bundle message);
+    @Override
+    public void onPushMessageReceived(Bundle message) {
+
+    }
+
+    public interface IPushNotificationInterface {
+        public void onPushMessageReceived(Bundle message);
+    }
 }
