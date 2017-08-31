@@ -29,10 +29,21 @@ const Outage = () => (
       justifyContent: 'center',
       alignItems: 'center',
     }}>
-    <Text>{DeviceInfo.getModel}</Text>
-  <Text>Copyright 2017</Text>
-  <Text>Telstra and Salesforce POC</Text>
-  </View></View>
+    <Text>Service Status</Text>
+    <Text>Services:</Text>
+    <Text>Account:</Text>
+  <Text>Service:</Text>
+  <Text>Status:</Text>
+  <Text>Restoring:</Text>
+  <Text>Hi @Name
+As your service is currently interrupted we have added free extra data to your account so you can use this mobile to connect your home devices to the internet.
+ </Text>
+ </View></View>
+ <Button
+    raised
+    backgroundColor="#397af8"
+    style={{marginBottom: 8}}
+    title='Related help and support' />
   </View>
 
 );

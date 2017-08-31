@@ -15,17 +15,17 @@ const styles = StyleSheet.create({
   }
 });
 
-const BillingButton = ({ billing }) => (
+const RelatedHelpButton = ({ relatedHelp }) => (
     <Button
     raised
     backgroundColor="#397af8"
     style={{marginBottom: 8}}
-    onPress={billing}
-    title='My bills' />
+    onPress={relatedHelp}
+    title='Related help and support' />
 );
 
-BillingButton.propTypes = {
-  billing: PropTypes.func.isRequired,
+RelatedHelp.propTypes = {
+    relatedHelp: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -33,7 +33,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  billing: () => dispatch(NavigationActions.navigate({ routeName: 'Billing' })),
+    relatedHelp: () => dispatch(NavigationActions.navigate({ routeName: 'RelatedHelp' })),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BillingButton);
+export default connect(mapStateToProps, mapDispatchToProps)(OutageButton);

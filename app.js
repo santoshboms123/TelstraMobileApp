@@ -37,7 +37,7 @@ import {
   AppState
 } from "react-native";
 
-import { StackNavigator,  NavigationActions} from "react-navigation";
+import { StackNavigator, NavigationActions } from "react-navigation";
 import { oauth, net } from "react-native-force";
 //import Route from './src/Route';
 // import PageOne from './components/PageOne';
@@ -63,12 +63,13 @@ import BillingButton from "./src/components/BillingButton";
 import { Button } from "react-native-elements";
 import AppStateListener from "react-native-appstate-listener";
 //import { NavigationActions } from 'react-navigation';
-import store from './src/store';
+import store from "./src/store";
 
-const promisify = fn => (...args) => new Promise((resolve, reject) => fn(...args, resolve, reject));
+const promisify = fn => (...args) =>
+  new Promise((resolve, reject) => fn(...args, resolve, reject));
 
-console.log(store);
-debugger;
+//console.log(store);
+//debugger;
 
 const { func } = PropTypes;
 
@@ -84,11 +85,39 @@ function handleInactive() {
   console.log("The application is now inactive!");
 }
 
+let _gExt;
+
+function setExtendedData(a) {
+  _gExt = a;
+  //this.setState({ dataExtended: a })
+  setPostCode(a[0].MailingPostalCode);
+  Firebase.messaging().subscribeToTopic(getPostCode());
+  setContactId(a[0].Id);
+  Firebase.messaging().subscribeToTopic(getContactId());
+}
+function getExtendedData(a) {
+  return _gExt;
+  //this.setState({ dataExtended: a })
+}
+let _postCode;
+function getPostCode() {
+  return _postCode;
+}
+function setPostCode(v) {
+  _postCode = v;
+}
+let _contactId;
+function getContactId() {
+  return _contactId;
+}
+function setContactId(v) {
+  _contactId = v;
+}
+
 class UserListScreen extends React.Component {
   static propTypes = {
     onNavigateToOutage: func.isRequired
-  }
-
+  };
 
   store = createStore(AppReducer);
 
@@ -114,8 +143,7 @@ class UserListScreen extends React.Component {
     );
     const cred = await promisify(oauth.getAuthCredentials)();
     console.log(cred);
-    this.setState({currentUserCred: cred});
-    debugger;
+    this.setState({ currentUserCred: cred });
     console.log(AppState);
     const url = Linking.getInitialURL().then(url => {
       debugger;
@@ -129,45 +157,72 @@ class UserListScreen extends React.Component {
 
     // Firebase.initialise();
     // Firebase.messaging.subscribeToTopic('foobar');
-    Firebase.messaging().subscribeToTopic("Outage");
+    //  Firebase.messaging().subscribeToTopic("Outage");
     // Firebase.messaging().setBadgeNumber(3);
     //    Firebase.on('notification', (notif) => {
     //     console.log(notif)  //{ Item: 'cool', Another: 'cooler' }
     //   })
+
     Firebase.messaging()
       .getInitialNotification()
       .then(notification => {
         console.log("Notification which opened the app: ", notification);
+        if (notification.from === "/topics/"+getPostCode()) {
+          alert("Outage Notification is been identified");
+          this.props.onNavigateToOutage();
+        } else if (notification.from === "/topics/"+getContactId()) {
+          alert("Service has been restored");
+        }
         if (notification.collapse_key) {
-        //   dispatch(NavigationActions.navigate({ routeName: 'Outage' }));
-        //debugger;
-            this.props.onNavigateToOutage();
+          //   dispatch(NavigationActions.navigate({ routeName: 'Outage' }));
+          //debugger;
+          this.props.onNavigateToOutage();
           //this.setState({ nav: "Outage" });
           //navigation.dispatch({ type: 'Outage' });
-
         }
       });
+    // const topicOutage = "3000Outage";
+    // const topicRestored = "3000Restored";
 
-      //console.log(oauth.getAuthCredentials);
-      net.query("Select firstname,lastname,Mailingpostalcode from contact where Related_User_Customer__c =" + this.state.currentUserCred.userId, response =>
-        that.setState({ data: response.records })
-        );
-        console.log(this.state.data);
+    // Firebase.messaging().subscribeToTopic(topicOutage);
+    // Firebase.messaging().subscribeToTopic(topicRestored);
+    //console.log(oauth.getAuthCredentials);
+    // net.query("Select firstname,lastname,Mailingpostalcode from contact where Related_User_Customer__c =" + this.state.currentUserCred.userId, response =>
+    //   that.setState({ data: response.records })
+    //   );
+    //   console.log(this.state.data);
+
+    if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+      //var that = this;
+      net.query(
+        "Select id, firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
+          this.state.currentUserCred.userId +
+          "'",
+        response => setExtendedData(response.records)
+      );
+    }
+
+    // const credE = await promisify(net.query(
+    //   "Select firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
+    //     this.state.currentUserCred.userId + "'",
+    //   response => this.setState({ dataExtended: response.records[0] })));
   }
 
   fetchData() {
-    console.log(oauth.getAuthCredentials);
-
+    //console.log(oauth.getAuthCredentials);
     // var that = this;
     // net.query("SELECT Id, Name FROM User LIMIT 10", response =>
     //   that.setState({ data: response.records })
     // );
     // let id;
-    // var that = this;
-    // net.query("Select firstname,lastname,Mailingpostalcode from contact where Related_User_Customer__c =" + this.state.currentUserCred.userId, response =>
-    //   that.setState({ data: response.records })
-    // );
-
+    // if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+    //   var that = this;
+    //   net.query(
+    //     "Select firstname,lastname,Mailingpostalcode from contact where Related_User_Customer__c =" +
+    //       this.state.currentUserCred.userId,
+    //     response => that.setState({ data: response.records })
+    //   );
+    // }
   }
   closeControlPanel = () => {
     this._drawer.close();
@@ -234,28 +289,26 @@ class UserListScreen extends React.Component {
       //   />
       // </View>
 
-    
-        <SideMenu ref="menu" menu={menu}>
-          <View
-            style={{
-              justifyContent: "flex-end",
-              backgroundColor: "white",
-              borderBottomWidth: 1
-            }}
-          >
-            <TouchableOpacity onPress={onHamburger}>
-              {/* <Hamburger type="spinArrow" active={false} onPress={onHamburger}/> */}
-              <Image active={false} source={require("./Hamburger.png")} />
-            </TouchableOpacity>
-          </View>
-          <AppWithNavigationState />
-          <AppStateListener
-            onActive={handleActive}
-            onBackground={handleBackground}
-            onInactive={handleInactive}
-          />
-        </SideMenu>
-
+      <SideMenu ref="menu" menu={menu}>
+        <View
+          style={{
+            justifyContent: "flex-end",
+            backgroundColor: "white",
+            borderBottomWidth: 1
+          }}
+        >
+          <TouchableOpacity onPress={onHamburger}>
+            {/* <Hamburger type="spinArrow" active={false} onPress={onHamburger}/> */}
+            <Image active={false} source={require("./Hamburger.png")} />
+          </TouchableOpacity>
+        </View>
+        <AppWithNavigationState />
+        <AppStateListener
+          onActive={handleActive}
+          onBackground={handleBackground}
+          onInactive={handleInactive}
+        />
+      </SideMenu>
     );
   }
 }
@@ -282,8 +335,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onNavigateToOutage: () => {
-      debugger;
-      dispatch(NavigationActions.navigate({ routeName: "Outage" }))
+    dispatch(NavigationActions.navigate({ routeName: "Outage" }));
   }
 });
 

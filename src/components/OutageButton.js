@@ -21,7 +21,7 @@ const OutageButton = ({ outage }) => (
     backgroundColor="#397af8"
     style={{marginBottom: 8}}
     onPress={outage}
-    title='Outage' />
+    title='Service Status' />
 );
 
 OutageButton.propTypes = {

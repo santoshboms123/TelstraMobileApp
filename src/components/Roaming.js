@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
     flex: 1,  
     backgroundColor: '#FFFFFF',
     flexDirection: 'column',
-    padding: 8
+    padding: 8,
+    justifyContent: 'space-between'
   },
   textTitle: {
     fontSize: 32,
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
 
 const Roaming = () => (
   <View style={styles.container} >
-      <View style={styles.display}>
+      {/* <View style={styles.display}>
   <View style={{
       justifyContent: 'center',
       alignItems: 'center',
@@ -32,7 +33,7 @@ const Roaming = () => (
           style={styles.image}>
       </Image>
   </View>
-  </View>
+  </View> */}
   <View style={styles.display}>
   <View style={{
       justifyContent: 'center',

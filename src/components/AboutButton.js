@@ -11,7 +11,7 @@ const AboutButton = ({ about }) => (
     backgroundColor="#397af8"
     style={{marginBottom: 8}}
     onPress={about}
-    title='About' />
+    title='Service help and support' />
 );
 
 AboutButton.propTypes = {

@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const About = () => (
+const Offer = () => (
   <View style={styles.container} >
   <View style={styles.display}>
   <View style={{
@@ -44,7 +44,7 @@ const About = () => (
 );
 
 About.navigationOptions = {
-  title: 'Service status',
+  title: 'Offer',
 };
 
 export default About;

@@ -24,7 +24,12 @@ import RNFirebase from 'react-native-firebase'
 const configurationOptions = {
   debug: true,
 }
-const firebase = RNFirebase.initializeApp(configurationOptions)
+const firebase = RNFirebase.initializeApp(configurationOptions);
+// const topicOutage = "3000Outage";
+// const topicRestored = "3000Restored";
+
+// firebase.messaging().subscribeToTopic(topicOutage);
+// firebase.messaging().subscribeToTopic(topicRestored);
 
 export default firebase
 
