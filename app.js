@@ -47,7 +47,7 @@ import { createStore } from "redux";
 import SideMenu from "react-native-simple-drawer";
 import AppReducer from "./src/reducers";
 import AppWithNavigationState from "./src/navigators/AppNavigator";
-//import SideMenu from './src/components/SideMenuDraw';
+import SideBar from './src/components/SideBar';
 //import Drawer from 'react-native-drawer';
 import SplashScreen from "react-native-splash-screen";
 import Firebase from "./src/firebase";
@@ -85,15 +85,23 @@ function handleInactive() {
   console.log("The application is now inactive!");
 }
 
-let _gExt;
+closeControlPanel = () => {
+  // this._drawer.close();
+   this.refs.menu.close();
+ };
 
+let _gS;
+
+let _gExt;
 function setExtendedData(a) {
   _gExt = a;
   //this.setState({ dataExtended: a })
   setPostCode(a[0].MailingPostalCode);
   Firebase.messaging().subscribeToTopic(getPostCode());
+  alert("topic set is = "+getPostCode());
   setContactId(a[0].Id);
   Firebase.messaging().subscribeToTopic(getContactId());
+  alert("topic set is = "+getContactId());
 }
 function getExtendedData(a) {
   return _gExt;
@@ -173,10 +181,11 @@ class UserListScreen extends React.Component {
         } else if (notification.from === "/topics/"+getContactId()) {
           alert("Service has been restored");
         }
+        alert(notification.from);
         if (notification.collapse_key) {
           //   dispatch(NavigationActions.navigate({ routeName: 'Outage' }));
           //debugger;
-          this.props.onNavigateToOutage();
+          //this.props.onNavigateToOutage();
           //this.setState({ nav: "Outage" });
           //navigation.dispatch({ type: 'Outage' });
         }
@@ -201,11 +210,12 @@ class UserListScreen extends React.Component {
         response => setExtendedData(response.records)
       );
     }
-
+    SplashScreen.hide();
     // const credE = await promisify(net.query(
     //   "Select firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
     //     this.state.currentUserCred.userId + "'",
     //   response => this.setState({ dataExtended: response.records[0] })));
+    
   }
 
   fetchData() {
@@ -224,13 +234,44 @@ class UserListScreen extends React.Component {
     //   );
     // }
   }
-  closeControlPanel = () => {
-    this._drawer.close();
+  closeControlPanel = (onItemSelected) => {
+   // this._drawer.close();
+    this.refs.menu.close();
+    //this.props.onNavigateToOutage();
+    //alert(onItemSelected);
+    switch(onItemSelected){
+      case"Outage":
+      this.props.onNavigateToOutage();
+      break;
+      case "Roaming":
+      this.props.onNavigateToRoaming();
+      break;
+      case "About":
+      this.props.onNavigateToAbout();
+      break;
+      case "Billing":
+      this.props.onNavigateToBilling();
+      break;
+    }
+    //alert(this.props);
   };
   openControlPanel = () => {
     this._drawer.open();
   };
+  updateMenuState(isOpen) {
+    this.setState({ isOpen });
+  }
+  // onMenuItemSelected(isOpen) {
+  //   alert(this);
+  // }
 
+  onMenuItemSelected = item =>
+    this.setState({
+      isOpen: false,
+      selectedItem: item,
+    });
+
+  //onMenuItemSelected = item => this.refs.menu.close();
   render() {
     onHamburger = () => {
       //this.setState({active: !this.state.active});
@@ -241,7 +282,13 @@ class UserListScreen extends React.Component {
       this.refs.menu.open();
       // this._drawer.open();
     };
-    const menu = (
+    closeControlPanel = () => {
+      // this._drawer.close();
+       this.refs.menu.close();
+       
+     };
+     const menu = <SideBar onItemSelected={this.closeControlPanel} />
+    const menu1 = (
       //         <View style={styles.container}>
       //   <FlatList
       //     data={this.state.data}
@@ -249,7 +296,6 @@ class UserListScreen extends React.Component {
       //     keyExtractor={(item, index) => index}
       //   />
       // </View>
-
       <View style={styles.container}>
         <View style={styles.display}>
           <View
@@ -275,7 +321,7 @@ class UserListScreen extends React.Component {
           >
             <Text>© Copyright 2017</Text>
             <Text>Telstra and Salesforce</Text>
-            <Text>POC Version 3.3</Text>
+            <Text>POC Version 3.4</Text>
           </View>
         </View>
       </View>
@@ -289,7 +335,9 @@ class UserListScreen extends React.Component {
       //   />
       // </View>
 
-      <SideMenu ref="menu" menu={menu}>
+      <SideMenu ref="menu" menu={menu}
+           isOpen={this.state.isOpen}
+        onChange={isOpen => false}>
         <View
           style={{
             justifyContent: "flex-end",
@@ -336,7 +384,16 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onNavigateToOutage: () => {
     dispatch(NavigationActions.navigate({ routeName: "Outage" }));
-  }
+  },
+  onNavigateToRoaming: () => {
+    dispatch(NavigationActions.navigate({ routeName: "Roaming" }));
+  },
+  onNavigateToAbout: () => {
+    dispatch(NavigationActions.navigate({ routeName: "About" }));
+  },
+  onNavigateToBilling: () => {
+    dispatch(NavigationActions.navigate({ routeName: "Billing" }));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserListScreen);

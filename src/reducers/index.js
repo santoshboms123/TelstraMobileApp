@@ -17,8 +17,7 @@ console.log(AppNavigator);
 debugger;
 const { getActionForPathAndParams, getStateForAction } = AppNavigator.router;
 const initialState = getStateForAction(
-  getActionForPathAndParams('Outage')
-  
+  getActionForPathAndParams('Outage') 
 );
 
 export const name = 'navigation';

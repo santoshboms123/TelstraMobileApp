@@ -24,6 +24,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   about: () => dispatch(NavigationActions.navigate({ routeName: 'About' })),
+  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AboutButton);
