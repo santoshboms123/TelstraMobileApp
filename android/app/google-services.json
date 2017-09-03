@@ -1,7 +1,7 @@
 {
   "project_info": {
     "project_number": "801121151349",
-    "firebase_url": "https://gcm-http.googleapis.com/",
+    "firebase_url": "https://telstrasalesforce.firebaseio.com",
     "project_id": "telstrasalesforce",
     "storage_bucket": "telstrasalesforce.appspot.com"
   },
@@ -15,13 +15,21 @@
       },
       "oauth_client": [
         {
+          "client_id": "801121151349-fjj0o0f3gh51vngv5tadmhckndgtm8na.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "au.com.telstra",
+            "certificate_hash": "7ddad3cf05f5d6afc6d4c461f0ac92764d96f907"
+          }
+        },
+        {
           "client_id": "801121151349-219mr3jhh8s6ff51rfuk4asbpmvufbca.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAZv6auxUHDp9w00JP0KNetMEPbUYfBvhw"
+          "current_key": "AIzaSyCjGzZyvyNqr3h796t--qgqHf24llCjG3s"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801121151349-219mr3jhh8s6ff51rfuk4asbpmvufbca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -74,6 +74,7 @@ function handleBackground() {
 function handleInactive() {
   console.log("The application is now inactive!");
 }
+
 class UserListScreen extends React.Component {
   static propTypes = {
     onNavigateToOutage: func.isRequired
@@ -101,16 +102,15 @@ class UserListScreen extends React.Component {
         );
       }
     );
-    debugger;
     const cred = await promisify(oauth.getAuthCredentials)();
     console.log(cred);
     this.setState({ currentUserCred: cred });
-    console.log(AppState);
-    const url = Linking.getInitialURL().then(url => {
-      if (url) {
-        const route = url.replace(/.*?:\/\//g, "");
-      }
-    });
+    // console.log(AppState);
+    // const url = Linking.getInitialURL().then(url => {
+    //   if (url) {
+    //     const route = url.replace(/.*?:\/\//g, "");
+    //   }
+    // });
     let contactInfo;
     if (this.state.currentUserCred && this.state.currentUserCred.userId) {
       let cInfo =
@@ -126,10 +126,39 @@ class UserListScreen extends React.Component {
     this.props.onOutage(contactInfo[0]);
 
     Firebase.messaging().subscribeToTopic((contactInfo)?contactInfo[0].MailingPostalCode:"3000");
-    alert("topic set is = " + contactInfo[0].MailingPostalCode);
+    //alert("topic set is = " + contactInfo[0].MailingPostalCode);
 
     Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
-    alert("topic set is = " + contactInfo[0].Id);
+    //alert("topic set is = " + contactInfo[0].Id);
+
+    // let itemsEffected;
+    // if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+    //   let cEffected =
+    //     "Select Name, Active__c, Affected_Area_Postcode__c, End_Time__c, Start_Time__c from Outage__c Where Active__c = true AND Affected_Area_Postcode__r.name = '" +
+    //     this.state.ContactInfo.MailingPostalCode +
+    //     "'";
+    //   itemsEffected = await new Promise(resolve =>
+    //     net.query(cEffected, response => resolve(response.records))
+    //   );
+    // }
+    // this.setState({ ContactInfoEffected: itemsEffected[0] });
+
+    // let itemsEffectedExtended;
+    // if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+    //   let cEffectedExt =
+    //     "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c ='" +
+    //     this.state.ContactInfo.Id +
+    //     "'";
+    //   itemsEffectedExtended = await new Promise(resolve =>
+    //     net.query(cEffectedExt, response => resolve(response.records))
+    //   );
+    // }
+    // this.setState({ ContactInfoEffectedExt: itemsEffectedExtended[0] });
+
+    // Firebase.messaging().subscribeToTopic(
+    //   this.state.ContactInfo.MailingPostalCode
+    // );
+
 
     Firebase.messaging()
     .getInitialNotification()
@@ -140,39 +169,13 @@ class UserListScreen extends React.Component {
         this.props.onNavigateToOutage();
       } else if (notification.from === "/topics/" +contactInfo[0].Id) {
         alert("Service has been restored");
+        this.props.onNavigateToOffer();
       }
-      alert(notification.from);
-      if (notification.collapse_key) {
-      }
+      // alert(notification.from);
+      // if (notification.collapse_key) {
+      // }
     });
 
-    let itemsEffected;
-    if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-      let cEffected =
-        "Select Name, Active__c, Affected_Area_Postcode__c, End_Time__c, Start_Time__c from Outage__c Where Active__c = true AND Affected_Area_Postcode__r.name = '" +
-        this.state.ContactInfo.MailingPostalCode +
-        "'";
-      itemsEffected = await new Promise(resolve =>
-        net.query(cEffected, response => resolve(response.records))
-      );
-    }
-    this.setState({ ContactInfoEffected: itemsEffected[0] });
-
-    let itemsEffectedExtended;
-    if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-      let cEffectedExt =
-        "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c ='" +
-        this.state.ContactInfo.Id +
-        "'";
-      itemsEffectedExtended = await new Promise(resolve =>
-        net.query(cEffectedExt, response => resolve(response.records))
-      );
-    }
-    this.setState({ ContactInfoEffectedExt: itemsEffectedExtended[0] });
-
-    // Firebase.messaging().subscribeToTopic(
-    //   this.state.ContactInfo.MailingPostalCode
-    // );
     SplashScreen.hide();
 
     //this.setState({v:'vak'}, setExtendedData = () => {this.state.v})
@@ -192,6 +195,9 @@ class UserListScreen extends React.Component {
         break;
       case "Billing":
         this.props.onNavigateToBilling();
+        break;
+      case "Offer":
+        this.props.onNavigateToOffer();
         break;
     }
   };
@@ -277,6 +283,9 @@ const mapDispatchToProps = dispatch => ({
   },
   onNavigateToBilling: () => {
     dispatch(NavigationActions.navigate({ routeName: "Billing" }));
+  },
+  onNavigateToOffer: () => {
+    dispatch(NavigationActions.navigate({ routeName: "Offer" }));
   },
   onOutage: (ContactInfo) => {
     debugger;

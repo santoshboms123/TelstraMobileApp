@@ -29,6 +29,7 @@ package au.com.telstra;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.cboy.rn.splashscreen.SplashScreenReactPackage;
@@ -51,7 +52,8 @@ import io.invertase.firebase.database.RNFirebaseDatabasePackage; // Firebase Rea
 import io.invertase.firebase.messaging.RNFirebaseMessagingPackage; // Firebase Cloud Messaging
 import io.invertase.firebase.perf.RNFirebasePerformancePackage; // Firebase Performance
 import io.invertase.firebase.storage.RNFirebaseStoragePackage; // Firebase Storage
-
+import com.cboy.rn.splashscreen.SplashScreen; // here
+import com.salesforce.androidsdk.ui.SalesforceActivity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -71,12 +73,13 @@ public class MainApplication extends Application implements ReactApplication {
 		protected List<ReactPackage> getPackages() {
 			return Arrays.asList(
 					new MainReactPackage(),
+            new MapsPackage(),
             new VectorIconsPackage(),
             new RNDeviceInfo(),
 					new RNFirebasePackage(),  // <-- Add this line
 					// Add these packages as appropriate
-					new RNFirebaseAdMobPackage(),
-					new RNFirebaseAnalyticsPackage(),
+					//new RNFirebaseAdMobPackage(),
+					//new RNFirebaseAnalyticsPackage(),
 					new RNFirebaseAuthPackage(),
 					new RNFirebaseRemoteConfigPackage(),
 					new RNFirebaseCrashPackage(),
@@ -84,7 +87,7 @@ public class MainApplication extends Application implements ReactApplication {
 					new RNFirebaseMessagingPackage(),
 					new RNFirebasePerformancePackage(),
 					new RNFirebaseStoragePackage(),
-            new SplashScreenReactPackage(),
+                    new SplashScreenReactPackage(),
 					SalesforceReactSDKManager.getInstance().getReactPackage()
 			);
 		}
@@ -94,12 +97,15 @@ public class MainApplication extends Application implements ReactApplication {
 	public ReactNativeHost getReactNativeHost() {
 		return mReactNativeHost;
 	}
-	static public TelstraPushNotification rp = new TelstraPushNotification ();;
+	static public TelstraPushNotification rp = new TelstraPushNotification ();
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		SplashScreen.show(null);
 		SalesforceReactSDKManager.initReactNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);
 		SalesforceReactSDKManager.getInstance().setPushNotificationReceiver(rp);
+//		SalesforceSDKManager.initNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);
+//		SalesforceSDKManager.getInstance().setPushNotificationReceiver(rp);
 	}
 }
 

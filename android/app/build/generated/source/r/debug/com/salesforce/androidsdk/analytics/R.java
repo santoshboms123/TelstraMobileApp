@@ -8,7 +8,7 @@ package com.salesforce.androidsdk.analytics;
 
 public final class R {
 	public static final class string {
-		public static final int app_name = 0x7f07003b;
-		public static final int app_package = 0x7f07003c;
+		public static final int app_name = 0x7f070035;
+		public static final int app_package = 0x7f070036;
 	}
 }

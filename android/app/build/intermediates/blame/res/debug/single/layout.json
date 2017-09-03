@@ -224,6 +224,10 @@
         "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_action_menu_layout.xml"
     },
     {
+        "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/layout/launch_screen.xml",
+        "source": "/Users/pato/Documents/TelstraMobileApp/android/app/src/main/res/layout/launch_screen.xml"
+    },
+    {
         "merged": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/res/merged/debug/layout/sf__inspector.xml",
         "source": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SmartStore/unspecified/res/layout/sf__inspector.xml"
     },

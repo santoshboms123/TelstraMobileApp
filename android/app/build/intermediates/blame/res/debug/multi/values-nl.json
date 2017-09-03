@@ -691,122 +691,8 @@
                     "startLine": 38,
                     "startColumn": 4,
                     "startOffset": 4724,
-                    "endColumn": 78,
-                    "endOffset": 4798
-                },
-                "from": {
-                    "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/res/values-nl/values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 0,
-                        "startOffset": 237,
-                        "endColumn": 74,
-                        "endOffset": 311
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 39,
-                    "startColumn": 4,
-                    "startOffset": 4803,
-                    "endColumn": 123,
-                    "endOffset": 4922
-                },
-                "from": {
-                    "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/res/values-nl/values.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 0,
-                        "startOffset": 312,
-                        "endColumn": 119,
-                        "endOffset": 431
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 40,
-                    "startColumn": 4,
-                    "startOffset": 4927,
-                    "endColumn": 71,
-                    "endOffset": 4994
-                },
-                "from": {
-                    "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/res/values-nl/values.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 0,
-                        "startOffset": 432,
-                        "endColumn": 67,
-                        "endOffset": 499
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 41,
-                    "startColumn": 4,
-                    "startOffset": 4999,
-                    "endColumn": 69,
-                    "endOffset": 5064
-                },
-                "from": {
-                    "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/res/values-nl/values.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 0,
-                        "startOffset": 500,
-                        "endColumn": 65,
-                        "endOffset": 565
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 42,
-                    "startColumn": 4,
-                    "startOffset": 5069,
-                    "endColumn": 82,
-                    "endOffset": 5147
-                },
-                "from": {
-                    "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/res/values-nl/values.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 0,
-                        "startOffset": 566,
-                        "endColumn": 78,
-                        "endOffset": 644
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 43,
-                    "startColumn": 4,
-                    "startOffset": 5152,
-                    "endColumn": 114,
-                    "endOffset": 5262
-                },
-                "from": {
-                    "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/res/values-nl/values.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 0,
-                        "startOffset": 645,
-                        "endColumn": 110,
-                        "endOffset": 755
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 44,
-                    "startColumn": 4,
-                    "startOffset": 5267,
                     "endColumn": 81,
-                    "endOffset": 5344
+                    "endOffset": 4801
                 },
                 "from": {
                     "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-nl/values-nl.xml",
@@ -821,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 5349,
+                    "startOffset": 4806,
                     "endColumn": 100,
-                    "endOffset": 5445
+                    "endOffset": 4902
                 },
                 "from": {
                     "file": "/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-nl/values-nl.xml",

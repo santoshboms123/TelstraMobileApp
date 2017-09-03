@@ -48,39 +48,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2c73e2a93e00abd240e495c1e62217e53904a3f3">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-11.0.4_b4bbb7a7481d11adf4dea6d880923bcd984f2fc5.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.0.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="eea424e61a0c85b93a0e477565314a58136abaea">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-11.0.4_cd316869c02bd986825380ab39edf903f863d465.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2cb88e7e28736d44e7e643deb80c9af1c3662c8">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-11.0.4_fa28d6751e21b5827b94a08283ff4b71f3414200.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="34c23b5894b4f24d566bfc33e0e25462c6436b78">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-11.0.4_537fbc9d3a291de71c789b597a7ef2185848536c.jar" />
     </item>
     <item
         is-multidex="false"
@@ -417,12 +390,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="416fb9ee2fd6e7af0bba04b01d90cb475b1e2074">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-11.0.4_80cfc62eb67c6254f1d98079c39a10203be6aff4.jar" />
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.2.4_4b56e31619ccd322754e21581e98247db5218a6b.jar" />
     </item>
     <item
         is-multidex="false"
@@ -441,6 +414,15 @@
         revision="25.0.0"
         sha1="2e4336ffc2b7653868134d7f6f8b28523ef54645">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/Telstra-react-native-device-info-unspecified_747e8686852147a161323bdf5b670300b94185f6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra/react-native-maps/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e30c0d599b6cb1acf3f986d2c29a1a6ecf83c407">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/Telstra-react-native-maps-unspecified_d4f7f691e3253faa6bf2008a74f5af18dd303039.jar" />
     </item>
     <item
         is-multidex="false"

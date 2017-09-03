@@ -30,7 +30,7 @@ const Offer = () => (
       justifyContent: 'center',
       alignItems: 'center',
     }}>
-    <Text>{DeviceInfo.getModel}</Text>
+    <Text>OFFER!!!</Text>
     <Button
     raised
     backgroundColor="#397af8"
@@ -47,4 +47,4 @@ About.navigationOptions = {
   title: 'Offer',
 };
 
-export default About;
+export default Offer;

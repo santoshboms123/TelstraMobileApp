@@ -10,6 +10,7 @@ import About from '../components/About';
 import Roaming from '../components/Roaming';
 import Outage from '../components/Outage';
 import Billing from '../components/Billing';
+import Service from '../components/Service';
 
 export const AppNavigator = StackNavigator({
   Main: { screen: MainScreen },
@@ -19,6 +20,7 @@ export const AppNavigator = StackNavigator({
   Roaming: {screen: Roaming},
   Outage: {screen: Outage},
   Billing: {screen: Billing},
+  Service: {screen: Service}
 },{ headerMode: 'none' });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
