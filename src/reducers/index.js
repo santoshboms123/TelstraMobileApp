@@ -14,7 +14,6 @@ import { AppNavigator } from '../navigators/AppNavigator';
 
 //import { router } from '../../routes';
 console.log(AppNavigator);
-debugger;
 const { getActionForPathAndParams, getStateForAction } = AppNavigator.router;
 const initialState = getStateForAction(
   getActionForPathAndParams('Outage') 
@@ -62,10 +61,20 @@ function auth(state = initialAuthState, action) {
       return state;
   }
 }
-
+function ContactInfo(state = { ContactInfo: null }, action) {
+  debugger;
+  switch (action.type) {
+    case 'ContactInfo': {
+      const { ContactInfo } = action;
+      return { ...state, ContactInfo };
+    }
+  }
+  return state;
+}
 const AppReducer = combineReducers({
   nav: reducer,
   auth,
+  ContactInfo
 });
 
 export default AppReducer;

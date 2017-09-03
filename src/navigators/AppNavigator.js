@@ -15,7 +15,7 @@ export const AppNavigator = StackNavigator({
   Main: { screen: MainScreen },
   Login: { screen: LoginScreen },
   Profile: { screen: ProfileScreen },
-  About: {screen: About, navigationOptions:{ttile: 'About'}},
+  About: {screen: About, navigationOptions:{title: 'About'}},
   Roaming: {screen: Roaming},
   Outage: {screen: Outage},
   Billing: {screen: Billing},

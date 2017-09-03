@@ -39,21 +39,15 @@ import {
 
 import { StackNavigator, NavigationActions } from "react-navigation";
 import { oauth, net } from "react-native-force";
-//import Route from './src/Route';
-// import PageOne from './components/PageOne';
-// import PageTwo from './components/PageTwo';
 import { Provider, connect } from "react-redux";
 import { createStore } from "redux";
 import SideMenu from "react-native-simple-drawer";
 import AppReducer from "./src/reducers";
 import AppWithNavigationState from "./src/navigators/AppNavigator";
-import SideBar from './src/components/SideBar';
-//import Drawer from 'react-native-drawer';
+import SideBar from "./src/components/SideBar";
 import SplashScreen from "react-native-splash-screen";
 import Firebase from "./src/firebase";
-//import SideBar from "./src/components/MainScreen";
 import Hamburger from "react-native-hamburger";
-
 import LoginStatusMessage from "./src/components/LoginStatusMessage";
 import AuthButton from "./src/components/AuthButton";
 import AboutButton from "./src/components/AboutButton";
@@ -62,14 +56,10 @@ import OutageButton from "./src/components/OutageButton";
 import BillingButton from "./src/components/BillingButton";
 import { Button } from "react-native-elements";
 import AppStateListener from "react-native-appstate-listener";
-//import { NavigationActions } from 'react-navigation';
 import store from "./src/store";
 
 const promisify = fn => (...args) =>
   new Promise((resolve, reject) => fn(...args, resolve, reject));
-
-//console.log(store);
-//debugger;
 
 const { func } = PropTypes;
 
@@ -84,44 +74,6 @@ function handleBackground() {
 function handleInactive() {
   console.log("The application is now inactive!");
 }
-
-closeControlPanel = () => {
-  // this._drawer.close();
-   this.refs.menu.close();
- };
-
-let _gS;
-
-let _gExt;
-function setExtendedData(a) {
-  _gExt = a;
-  //this.setState({ dataExtended: a })
-  setPostCode(a[0].MailingPostalCode);
-  Firebase.messaging().subscribeToTopic(getPostCode());
-  alert("topic set is = "+getPostCode());
-  setContactId(a[0].Id);
-  Firebase.messaging().subscribeToTopic(getContactId());
-  alert("topic set is = "+getContactId());
-}
-function getExtendedData(a) {
-  return _gExt;
-  //this.setState({ dataExtended: a })
-}
-let _postCode;
-function getPostCode() {
-  return _postCode;
-}
-function setPostCode(v) {
-  _postCode = v;
-}
-let _contactId;
-function getContactId() {
-  return _contactId;
-}
-function setContactId(v) {
-  _contactId = v;
-}
-
 class UserListScreen extends React.Component {
   static propTypes = {
     onNavigateToOutage: func.isRequired
@@ -149,111 +101,99 @@ class UserListScreen extends React.Component {
         );
       }
     );
+    debugger;
     const cred = await promisify(oauth.getAuthCredentials)();
     console.log(cred);
     this.setState({ currentUserCred: cred });
     console.log(AppState);
     const url = Linking.getInitialURL().then(url => {
-      debugger;
       if (url) {
         const route = url.replace(/.*?:\/\//g, "");
-        //console.log(route);
-        //alert(route);
-        //this._navigator.replace(this.state.routes[route]);
+      }
+    });
+    let contactInfo;
+    if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+      let cInfo =
+        "Select id, firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
+        this.state.currentUserCred.userId +
+        "'";
+      contactInfo = await new Promise(resolve =>
+        net.query(cInfo, response => resolve(response.records))
+      );
+    }
+    debugger;
+    this.setState({ ContactInfo: contactInfo[0] });
+    this.props.onOutage(contactInfo[0]);
+
+    Firebase.messaging().subscribeToTopic((contactInfo)?contactInfo[0].MailingPostalCode:"3000");
+    alert("topic set is = " + contactInfo[0].MailingPostalCode);
+
+    Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
+    alert("topic set is = " + contactInfo[0].Id);
+
+    Firebase.messaging()
+    .getInitialNotification()
+    .then(notification => {
+      console.log("Notification which opened the app: ", notification);
+      if (notification.from === "/topics/" + contactInfo[0].MailingPostalCode) {
+        alert("Outage Notification is been identified");
+        this.props.onNavigateToOutage();
+      } else if (notification.from === "/topics/" +contactInfo[0].Id) {
+        alert("Service has been restored");
+      }
+      alert(notification.from);
+      if (notification.collapse_key) {
       }
     });
 
-    // Firebase.initialise();
-    // Firebase.messaging.subscribeToTopic('foobar');
-    //  Firebase.messaging().subscribeToTopic("Outage");
-    // Firebase.messaging().setBadgeNumber(3);
-    //    Firebase.on('notification', (notif) => {
-    //     console.log(notif)  //{ Item: 'cool', Another: 'cooler' }
-    //   })
-
-    Firebase.messaging()
-      .getInitialNotification()
-      .then(notification => {
-        console.log("Notification which opened the app: ", notification);
-        if (notification.from === "/topics/"+getPostCode()) {
-          alert("Outage Notification is been identified");
-          this.props.onNavigateToOutage();
-        } else if (notification.from === "/topics/"+getContactId()) {
-          alert("Service has been restored");
-        }
-        alert(notification.from);
-        if (notification.collapse_key) {
-          //   dispatch(NavigationActions.navigate({ routeName: 'Outage' }));
-          //debugger;
-          //this.props.onNavigateToOutage();
-          //this.setState({ nav: "Outage" });
-          //navigation.dispatch({ type: 'Outage' });
-        }
-      });
-    // const topicOutage = "3000Outage";
-    // const topicRestored = "3000Restored";
-
-    // Firebase.messaging().subscribeToTopic(topicOutage);
-    // Firebase.messaging().subscribeToTopic(topicRestored);
-    //console.log(oauth.getAuthCredentials);
-    // net.query("Select firstname,lastname,Mailingpostalcode from contact where Related_User_Customer__c =" + this.state.currentUserCred.userId, response =>
-    //   that.setState({ data: response.records })
-    //   );
-    //   console.log(this.state.data);
-
+    let itemsEffected;
     if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-      //var that = this;
-      net.query(
-        "Select id, firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
-          this.state.currentUserCred.userId +
-          "'",
-        response => setExtendedData(response.records)
+      let cEffected =
+        "Select Name, Active__c, Affected_Area_Postcode__c, End_Time__c, Start_Time__c from Outage__c Where Active__c = true AND Affected_Area_Postcode__r.name = '" +
+        this.state.ContactInfo.MailingPostalCode +
+        "'";
+      itemsEffected = await new Promise(resolve =>
+        net.query(cEffected, response => resolve(response.records))
       );
     }
-    SplashScreen.hide();
-    // const credE = await promisify(net.query(
-    //   "Select firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
-    //     this.state.currentUserCred.userId + "'",
-    //   response => this.setState({ dataExtended: response.records[0] })));
-    
-  }
+    this.setState({ ContactInfoEffected: itemsEffected[0] });
 
-  fetchData() {
-    //console.log(oauth.getAuthCredentials);
-    // var that = this;
-    // net.query("SELECT Id, Name FROM User LIMIT 10", response =>
-    //   that.setState({ data: response.records })
-    // );
-    // let id;
-    // if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-    //   var that = this;
-    //   net.query(
-    //     "Select firstname,lastname,Mailingpostalcode from contact where Related_User_Customer__c =" +
-    //       this.state.currentUserCred.userId,
-    //     response => that.setState({ data: response.records })
-    //   );
-    // }
-  }
-  closeControlPanel = (onItemSelected) => {
-   // this._drawer.close();
-    this.refs.menu.close();
-    //this.props.onNavigateToOutage();
-    //alert(onItemSelected);
-    switch(onItemSelected){
-      case"Outage":
-      this.props.onNavigateToOutage();
-      break;
-      case "Roaming":
-      this.props.onNavigateToRoaming();
-      break;
-      case "About":
-      this.props.onNavigateToAbout();
-      break;
-      case "Billing":
-      this.props.onNavigateToBilling();
-      break;
+    let itemsEffectedExtended;
+    if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+      let cEffectedExt =
+        "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c ='" +
+        this.state.ContactInfo.Id +
+        "'";
+      itemsEffectedExtended = await new Promise(resolve =>
+        net.query(cEffectedExt, response => resolve(response.records))
+      );
     }
-    //alert(this.props);
+    this.setState({ ContactInfoEffectedExt: itemsEffectedExtended[0] });
+
+    // Firebase.messaging().subscribeToTopic(
+    //   this.state.ContactInfo.MailingPostalCode
+    // );
+    SplashScreen.hide();
+
+    //this.setState({v:'vak'}, setExtendedData = () => {this.state.v})
+  }
+  fetchData() {}
+  closeControlPanel = onItemSelected => {
+    this.refs.menu.close();
+    switch (onItemSelected) {
+      case "Outage":
+        this.props.onNavigateToOutage();
+        break;
+      case "Roaming":
+        this.props.onNavigateToRoaming();
+        break;
+      case "About":
+        this.props.onNavigateToAbout();
+        break;
+      case "Billing":
+        this.props.onNavigateToBilling();
+        break;
+    }
   };
   openControlPanel = () => {
     this._drawer.open();
@@ -261,83 +201,29 @@ class UserListScreen extends React.Component {
   updateMenuState(isOpen) {
     this.setState({ isOpen });
   }
-  // onMenuItemSelected(isOpen) {
-  //   alert(this);
-  // }
-
   onMenuItemSelected = item =>
     this.setState({
       isOpen: false,
-      selectedItem: item,
+      selectedItem: item
     });
 
-  //onMenuItemSelected = item => this.refs.menu.close();
-  render() {
+  render(ContactInfo) {
     onHamburger = () => {
-      //this.setState({active: !this.state.active});
-      // if(this.state.active)
-      //   this.refs.menu.close();
-      // else
       this.setState({ active: false });
       this.refs.menu.open();
-      // this._drawer.open();
     };
     closeControlPanel = () => {
-      // this._drawer.close();
-       this.refs.menu.close();
-       
-     };
-     const menu = <SideBar onItemSelected={this.closeControlPanel} />
-    const menu1 = (
-      //         <View style={styles.container}>
-      //   <FlatList
-      //     data={this.state.data}
-      //     renderItem={({item}) => <Text style={styles.item}>{item.Name}</Text>}
-      //     keyExtractor={(item, index) => index}
-      //   />
-      // </View>
-      <View style={styles.container}>
-        <View style={styles.display}>
-          <View
-            style={{
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <Image source={require("./Telstra.png")} style={styles.image} />
-          </View>
-        </View>
-        <RoamingButton style={styles.buttons} />
-        <OutageButton style={styles.buttons} />
-        <BillingButton style={styles.buttons} />
-        <AboutButton style={styles.buttons} />
-        <View style={styles.display}>
-          <View
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              marginBottom: 22
-            }}
-          >
-            <Text>© Copyright 2017</Text>
-            <Text>Telstra and Salesforce</Text>
-            <Text>POC Version 3.4</Text>
-          </View>
-        </View>
-      </View>
-    );
-    return (
-      // <View style={styles.container}>
-      //   <FlatList
-      //     data={this.state.data}
-      //     renderItem={({item}) => <Text style={styles.item}>{item.Name}</Text>}
-      //     keyExtractor={(item, index) => index}
-      //   />
-      // </View>
+      this.refs.menu.close();
+    };
+    const menu = <SideBar onItemSelected={this.closeControlPanel} />;
 
-      <SideMenu ref="menu" menu={menu}
-           isOpen={this.state.isOpen}
-        onChange={isOpen => false}>
+    return (
+      <SideMenu
+        ref="menu"
+        menu={menu}
+        isOpen={this.state.isOpen}
+        onChange={isOpen => false}
+      >
         <View
           style={{
             justifyContent: "flex-end",
@@ -375,10 +261,8 @@ const styles = StyleSheet.create({
   }
 });
 
-// export const App = UserListScreen;
-
 const mapStateToProps = state => ({
-  //isLoggedIn: state.auth.isLoggedIn,
+  ContactInfo: state.ContactInfo.ContactInfo,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -394,6 +278,10 @@ const mapDispatchToProps = dispatch => ({
   onNavigateToBilling: () => {
     dispatch(NavigationActions.navigate({ routeName: "Billing" }));
   },
+  onOutage: (ContactInfo) => {
+    debugger;
+    dispatch({ type: 'ContactInfo', ContactInfo });
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserListScreen);

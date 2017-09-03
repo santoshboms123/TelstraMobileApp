@@ -11,7 +11,6 @@ import {
 } from "react-native";
 
 const window = Dimensions.get("window");
-const uri = "../../Telstra.png";
 import AuthButton from "./AuthButton";
 import AboutButton from "./AboutButton";
 import RoamingButton from "./RoamingButton";
@@ -48,20 +47,15 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "300",
     paddingTop: 5,
-    marginBottom:8,
+    marginBottom: 8
   }
 });
 
-function Menu({ onItemSelected }) {
+export default function Menu({ onItemSelected }) {
   return (
     <ScrollView scrollsToTop={false} style={styles.menu}>
       <View style={styles.avatarContainer}>
-        {/* <Image
-          style={styles.avatar}
-          source={{ uri }}
-        /> */}
         <Image source={require("../../Telstra.png")} style={styles.image} />
-        <Text style={styles.name}>Your name</Text>
       </View>
       <Text onPress={() => onItemSelected("Roaming")} style={styles.item}>
         Travel Pass
@@ -73,35 +67,16 @@ function Menu({ onItemSelected }) {
         Service help and support
       </Text>
       <Hr lineColor="#b3b3b3" textColor="steelblue" />
-      <View style={marginTop=23}>
+      <View style={(marginTop = 23)}>
         <View>
           <Text>© Copyright 2017</Text>
           <Text>Telstra and Salesforce</Text>
-          <Text>POC Version 3.4</Text>
+          <Text>POC Version 3.6</Text>
         </View>
       </View>
     </ScrollView>
   );
 }
-function g() {
-  () => onItemSelected("Contacts");
-  _gS = "Contacts";
-}
 Menu.propTypes = {
-  onItemSelected: PropTypes.func.isRequired,
-  about: PropTypes.func.isRequired
+  onItemSelected: PropTypes.func.isRequired
 };
-
-// AboutButton.propTypes = {
-//   about: PropTypes.func.isRequired,
-// };
-
-const mapStateToProps = state => ({
-  //isLoggedIn: state.auth.isLoggedIn,
-});
-
-const mapDispatchToProps = dispatch => ({
-  about: () => dispatch(NavigationActions.navigate({ routeName: "About" }))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
