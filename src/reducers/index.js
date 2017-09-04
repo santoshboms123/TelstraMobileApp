@@ -13,7 +13,7 @@ import { AppNavigator } from '../navigators/AppNavigator';
 // );
 
 //import { router } from '../../routes';
-console.log(AppNavigator);
+//console.log(AppNavigator);
 const { getActionForPathAndParams, getStateForAction } = AppNavigator.router;
 const initialState = getStateForAction(
   getActionForPathAndParams('Outage') 

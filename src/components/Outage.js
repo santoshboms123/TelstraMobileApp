@@ -3,27 +3,56 @@ import { StyleSheet, View, Image, Text, Picker } from "react-native";
 import { Button } from "react-native-elements";
 import DeviceInfo from "react-native-device-info";
 import { Provider, connect } from "react-redux";
-
 import { StackNavigator, NavigationActions } from "react-navigation";
+
+const promisify = fn => (...args) =>
+  new Promise((resolve, reject) => fn(...args, resolve, reject));
+
+async function loaded() {
+  let itemsEffected;
+  if (
+    ContactInfo.ContactInfo.currentUserCred &&
+    ContactInfo.ContactInfo.currentUserCred.userId
+  ) {
+    let cEffected =
+      "Select Name, Active__c, Affected_Area_Postcode__c, End_Time__c, Start_Time__c from Outage__c Where Active__c = true AND Affected_Area_Postcode__r.name = '" +
+      ContactInfo.ContactInfo.MailingPostalCode +
+      "'";
+    itemsEffected = await new Promise(resolve =>
+      net.query(cEffected, response => resolve(response.records))
+    );
+  }
+  this.setState({ ContactInfoEffected: itemsEffected[0] });
+
+  let itemsEffectedExtended;
+  if (this.state.currentUserCred && this.state.currentUserCred.userId) {
+    let cEffectedExt =
+      "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c ='" +
+      ContactInfo.ContactInfo.Id +
+      "'";
+    itemsEffectedExtended = await new Promise(resolve =>
+      net.query(cEffectedExt, response => resolve(response.records))
+    );
+  }
+  this.setState({ ContactInfoEffectedExt: itemsEffectedExtended[0] });
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
-    justifyContent: 'space-between'
+    justifyContent: "space-between"
   },
   display: {
-    backgroundColor: "white",
-    color: "black"
+    backgroundColor: "white"
   },
   title: {
-    backgroundColor: "grey", 
-    color: "white" 
+    backgroundColor: "grey",
   }
 });
 
-const Outage = ({ ContactInfo, service }) => {
-  console.log("----- -- " + ContactInfo);
+const Outage = ({ ContactInfo, service, props }) => {
+ // console.log("----- -- " + ContactInfo);
   debugger;
   return (
     <View style={styles.container}>
@@ -41,8 +70,22 @@ const Outage = ({ ContactInfo, service }) => {
         <View>
           <Text>Service Status</Text>
           <View style={styles.title}>
-            <Text>Services: {(ContactInfo.ContactInfo)?ContactInfo.ContactInfo.Id:"0003433302"}</Text>
-            <Text>Account: {(ContactInfo.ContactInfo)?ContactInfo.ContactInfo.FirstName:"Mr" + "Smith"}</Text>
+            <Text>
+              Services:{" "}
+              {ContactInfo.ContactInfo ? (
+                ContactInfo.ContactInfo.Id
+              ) : (
+                "0003433302"
+              )}
+            </Text>
+            <Text>
+              Account:{" "}
+              {ContactInfo.ContactInfo ? (
+                ContactInfo.ContactInfo.FirstName
+              ) : (
+                "Mr" + "Smith"
+              )}
+            </Text>
             {/* <Text>Account: {(ContactInfo.ContactInfo)?ContactInfo.ContactInfo.FirstName:"Mr" + (ContactInfo.ContactInfo && ContactInfo.ContactInfo.FirstName)?ContactInfo.ContactInfo.LastName:"Smith"}</Text> */}
           </View>
           <Text>Service: Home broadband</Text>
@@ -56,20 +99,20 @@ const Outage = ({ ContactInfo, service }) => {
           {/* selectedValue={this.state.language}
   onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})} */}
           <Picker>
-  <Picker.Item label="Java" value="java" />
-  <Picker.Item label="JavaScript" value="js" />
-</Picker>
+            <Picker.Item label="Java" value="java" />
+            <Picker.Item label="JavaScript" value="js" />
+          </Picker>
         </View>
+        <Button
+          raised
+          backgroundColor="#397af8"
+          style={{ marginBottom: 8 }}
+          onPress={service}
+          title="Related help and support"
+        />
       </View>
-      <Button
-        raised
-        backgroundColor="#397af8"
-        style={{ marginBottom: 8 }}
-        onPress={service}
-        title="Related help and support"
-      />
     </View>
-  ); 
+  );
 };
 
 Outage.navigationOptions = {
@@ -87,7 +130,7 @@ const mapDispatchToProps = dispatch => ({
   // onNavigateToService: () => {
   //   dispatch(NavigationActions.navigate({ routeName: "Service" }));
   // },
-  service: () => dispatch(NavigationActions.navigate({ routeName: 'Service' })),
+  service: () => dispatch(NavigationActions.navigate({ routeName: "Service" }))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Outage);

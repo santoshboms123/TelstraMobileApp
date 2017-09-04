@@ -63,15 +63,21 @@ export default function Menu({ onItemSelected }) {
       <Text onPress={() => onItemSelected("Billing")} style={styles.item}>
         My bills
       </Text>
+      <Text onPress={() => onItemSelected("Outage")} style={styles.item}>
+        Outage
+      </Text>
+      <Text onPress={() => onItemSelected("Offer")} style={styles.item}>
+        Offer
+      </Text>
       <Text onPress={() => onItemSelected("About")} style={styles.item}>
-        Service help and support
+        Help and support
       </Text>
       <Hr lineColor="#b3b3b3" textColor="steelblue" />
       <View style={(marginTop = 23)}>
         <View>
           <Text>© Copyright 2017</Text>
           <Text>Telstra and Salesforce</Text>
-          <Text>POC Version 3.6</Text>
+          <Text>POC Version 3.7</Text>
         </View>
       </View>
     </ScrollView>

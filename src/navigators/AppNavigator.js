@@ -11,6 +11,9 @@ import Roaming from '../components/Roaming';
 import Outage from '../components/Outage';
 import Billing from '../components/Billing';
 import Service from '../components/Service';
+import Offer from '../components/Offer';
+//import Map from '../components/Map';
+import Address from '../components/Address';
 
 export const AppNavigator = StackNavigator({
   Main: { screen: MainScreen },
@@ -20,7 +23,10 @@ export const AppNavigator = StackNavigator({
   Roaming: {screen: Roaming},
   Outage: {screen: Outage},
   Billing: {screen: Billing},
-  Service: {screen: Service}
+  Service: {screen: Service},
+  Offer: {screen: Offer},
+ // Map: {screen: Map},
+  Address: {screen: Address}
 },{ headerMode: 'none' });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
@@ -30,6 +36,7 @@ const AppWithNavigationState = ({ dispatch, nav }) => (
 AppWithNavigationState.propTypes = {
   dispatch: PropTypes.func.isRequired,
   nav: PropTypes.object.isRequired,
+  //Address: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({

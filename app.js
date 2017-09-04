@@ -54,6 +54,7 @@ import AboutButton from "./src/components/AboutButton";
 import RoamingButton from "./src/components/RoamingButton";
 import OutageButton from "./src/components/OutageButton";
 import BillingButton from "./src/components/BillingButton";
+// import Map from './src/components/Map';
 import { Button } from "react-native-elements";
 import AppStateListener from "react-native-appstate-listener";
 import store from "./src/store";
@@ -121,6 +122,8 @@ class UserListScreen extends React.Component {
         net.query(cInfo, response => resolve(response.records))
       );
     }
+    // add cred to obj
+    contactInfo[0].currentUserCred = this.state.currentUserCred;
     debugger;
     this.setState({ ContactInfo: contactInfo[0] });
     this.props.onOutage(contactInfo[0]);
@@ -131,29 +134,7 @@ class UserListScreen extends React.Component {
     Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
     //alert("topic set is = " + contactInfo[0].Id);
 
-    // let itemsEffected;
-    // if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-    //   let cEffected =
-    //     "Select Name, Active__c, Affected_Area_Postcode__c, End_Time__c, Start_Time__c from Outage__c Where Active__c = true AND Affected_Area_Postcode__r.name = '" +
-    //     this.state.ContactInfo.MailingPostalCode +
-    //     "'";
-    //   itemsEffected = await new Promise(resolve =>
-    //     net.query(cEffected, response => resolve(response.records))
-    //   );
-    // }
-    // this.setState({ ContactInfoEffected: itemsEffected[0] });
-
-    // let itemsEffectedExtended;
-    // if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-    //   let cEffectedExt =
-    //     "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c ='" +
-    //     this.state.ContactInfo.Id +
-    //     "'";
-    //   itemsEffectedExtended = await new Promise(resolve =>
-    //     net.query(cEffectedExt, response => resolve(response.records))
-    //   );
-    // }
-    // this.setState({ ContactInfoEffectedExt: itemsEffectedExtended[0] });
+  
 
     // Firebase.messaging().subscribeToTopic(
     //   this.state.ContactInfo.MailingPostalCode
@@ -198,6 +179,9 @@ class UserListScreen extends React.Component {
         break;
       case "Offer":
         this.props.onNavigateToOffer();
+        break;
+      case "Address":
+        this.props.onNavigateToAddress();
         break;
     }
   };
@@ -286,6 +270,9 @@ const mapDispatchToProps = dispatch => ({
   },
   onNavigateToOffer: () => {
     dispatch(NavigationActions.navigate({ routeName: "Offer" }));
+  },
+  onNavigateToAddress: () => {
+    dispatch(NavigationActions.navigate({ routeName: "Address" }));
   },
   onOutage: (ContactInfo) => {
     debugger;

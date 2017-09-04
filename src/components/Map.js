@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     flexDirection: "column"
   }
 });
-const url = `http://maps.apple.com/?daddr=${address}`;
+const url = 'https://www.google.com.au/maps/@-33.856169,151.2044273,14z';
 Linking.openURL(url);
 const Map = () => (
   <MapView

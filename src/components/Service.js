@@ -35,11 +35,7 @@ const Service = () => (
   data={[{key: 'a'}, {key: 'b'}]}
   renderItem={({item}) => <Text>{item.key}</Text>}
 />
-    <Button
-    raised
-    backgroundColor="#397af8"
-    style={{marginBottom: 8}}
-    title='Related help and support' />
+
   <Text>Copyright 2017</Text>
   <Text>Telstra and Salesforce POC</Text>
   </View></View>
