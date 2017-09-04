@@ -76,6 +76,20 @@ function handleInactive() {
   console.log("The application is now inactive!");
 }
 
+async function handleOutage(contactId) {
+    let cEffectedExt = "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c = '"+contactId+"'";
+    return await new Promise(resolve => net.query(cEffectedExt, response => resolve(response.records)));
+}  
+
+async function handleDetails(contactId) { 
+    let cInfo =
+      "Select id, firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
+      contactId +
+      "'";
+      return await new Promise(resolve => net.query(cInfo, response => resolve(response.records)));
+}
+
+
 class UserListScreen extends React.Component {
   static propTypes = {
     onNavigateToOutage: func.isRequired
@@ -112,35 +126,22 @@ class UserListScreen extends React.Component {
     //     const route = url.replace(/.*?:\/\//g, "");
     //   }
     // });
-    let contactInfo;
-    if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-      let cInfo =
-        "Select id, firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
-        this.state.currentUserCred.userId +
-        "'";
-      contactInfo = await new Promise(resolve =>
-        net.query(cInfo, response => resolve(response.records))
-      );
-    }
+    const contactInfo = await handleDetails(this.state.currentUserCred.userId);
+    const outageInfo =  await handleOutage(this.state.currentUserCred.userId);
     // add cred to obj
     contactInfo[0].currentUserCred = this.state.currentUserCred;
     debugger;
     this.setState({ ContactInfo: contactInfo[0] });
     this.props.onOutage(contactInfo[0]);
-
     Firebase.messaging().subscribeToTopic((contactInfo)?contactInfo[0].MailingPostalCode:"3000");
     //alert("topic set is = " + contactInfo[0].MailingPostalCode);
-
     Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
     //alert("topic set is = " + contactInfo[0].Id);
+    SplashScreen.hide();
 
-  
-
-    // Firebase.messaging().subscribeToTopic(
-    //   this.state.ContactInfo.MailingPostalCode
-    // );
-
-
+    //this.setState({v:'vak'}, setExtendedData = () => {this.state.v})
+  }
+  fetchData() {
     Firebase.messaging()
     .getInitialNotification()
     .then(notification => {
@@ -156,12 +157,7 @@ class UserListScreen extends React.Component {
       // if (notification.collapse_key) {
       // }
     });
-
-    SplashScreen.hide();
-
-    //this.setState({v:'vak'}, setExtendedData = () => {this.state.v})
   }
-  fetchData() {}
   closeControlPanel = onItemSelected => {
     this.refs.menu.close();
     switch (onItemSelected) {
@@ -275,7 +271,6 @@ const mapDispatchToProps = dispatch => ({
     dispatch(NavigationActions.navigate({ routeName: "Address" }));
   },
   onOutage: (ContactInfo) => {
-    debugger;
     dispatch({ type: 'ContactInfo', ContactInfo });
   }
 });

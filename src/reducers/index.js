@@ -62,7 +62,6 @@ function auth(state = initialAuthState, action) {
   }
 }
 function ContactInfo(state = { ContactInfo: null }, action) {
-  debugger;
   switch (action.type) {
     case 'ContactInfo': {
       const { ContactInfo } = action;

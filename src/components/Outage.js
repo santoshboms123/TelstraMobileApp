@@ -8,35 +8,6 @@ import { StackNavigator, NavigationActions } from "react-navigation";
 const promisify = fn => (...args) =>
   new Promise((resolve, reject) => fn(...args, resolve, reject));
 
-async function loaded() {
-  let itemsEffected;
-  if (
-    ContactInfo.ContactInfo.currentUserCred &&
-    ContactInfo.ContactInfo.currentUserCred.userId
-  ) {
-    let cEffected =
-      "Select Name, Active__c, Affected_Area_Postcode__c, End_Time__c, Start_Time__c from Outage__c Where Active__c = true AND Affected_Area_Postcode__r.name = '" +
-      ContactInfo.ContactInfo.MailingPostalCode +
-      "'";
-    itemsEffected = await new Promise(resolve =>
-      net.query(cEffected, response => resolve(response.records))
-    );
-  }
-  this.setState({ ContactInfoEffected: itemsEffected[0] });
-
-  let itemsEffectedExtended;
-  if (this.state.currentUserCred && this.state.currentUserCred.userId) {
-    let cEffectedExt =
-      "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c ='" +
-      ContactInfo.ContactInfo.Id +
-      "'";
-    itemsEffectedExtended = await new Promise(resolve =>
-      net.query(cEffectedExt, response => resolve(response.records))
-    );
-  }
-  this.setState({ ContactInfoEffectedExt: itemsEffectedExtended[0] });
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -52,20 +23,9 @@ const styles = StyleSheet.create({
 });
 
 const Outage = ({ ContactInfo, service, props }) => {
- // console.log("----- -- " + ContactInfo);
   debugger;
   return (
     <View style={styles.container}>
-      {/* <View style={styles.display}>
-        <View
-          style={{
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
-          <Image source={require("../../Telstra.png")} style={styles.image} />
-        </View>
-      </View> */}
       <View style={styles.display}>
         <View>
           <Text>Service Status</Text>
@@ -120,7 +80,6 @@ Outage.navigationOptions = {
 };
 
 const mapStateToProps = state => {
-  debugger;
   return {
     ContactInfo: state.ContactInfo
   };
