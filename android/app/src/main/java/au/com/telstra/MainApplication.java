@@ -30,6 +30,13 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.airbnb.android.react.maps.MapsPackage;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+import io.invertase.firebase.RNFirebasePackage;
+import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.cboy.rn.splashscreen.SplashScreenReactPackage;
@@ -72,23 +79,15 @@ public class MainApplication extends Application implements ReactApplication {
 		@Override
 		protected List<ReactPackage> getPackages() {
 			return Arrays.asList(
-					new MainReactPackage(),
+			new MainReactPackage(),
             new MapsPackage(),
+            new RNFirebasePackage(),
+            new RNFirebaseAnalyticsPackage(),
+			new RNFirebaseMessagingPackage(),
             new VectorIconsPackage(),
             new RNDeviceInfo(),
-					new RNFirebasePackage(),  // <-- Add this line
-					// Add these packages as appropriate
-					//new RNFirebaseAdMobPackage(),
-					//new RNFirebaseAnalyticsPackage(),
-					new RNFirebaseAuthPackage(),
-					new RNFirebaseRemoteConfigPackage(),
-					new RNFirebaseCrashPackage(),
-					new RNFirebaseDatabasePackage(),
-					new RNFirebaseMessagingPackage(),
-					new RNFirebasePerformancePackage(),
-					new RNFirebaseStoragePackage(),
-                    new SplashScreenReactPackage(),
-					SalesforceReactSDKManager.getInstance().getReactPackage()
+			new SplashScreenReactPackage(),
+			SalesforceReactSDKManager.getInstance().getReactPackage()
 			);
 		}
 	};

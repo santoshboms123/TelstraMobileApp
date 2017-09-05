@@ -451,7 +451,6 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <item name="crash_reporting_present" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="progress_circular" type="id"/>
@@ -461,7 +460,7 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <integer name="google_play_services_version">11020000</integer>
+    <integer name="google_play_services_version">10084000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -540,12 +539,11 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="default_web_client_id" translatable="false">801121151349-219mr3jhh8s6ff51rfuk4asbpmvufbca.apps.googleusercontent.com</string>
-    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url" translatable="false">https://telstrasalesforce.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">801121151349</string>
-    <string name="google_api_key" translatable="false">AIzaSyCjGzZyvyNqr3h796t--qgqHf24llCjG3s</string>
+    <string name="google_api_key" translatable="false">AIzaSyAZv6auxUHDp9w00JP0KNetMEPbUYfBvhw</string>
     <string name="google_app_id" translatable="false">1:801121151349:android:0a8e61920a8f051b</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCjGzZyvyNqr3h796t--qgqHf24llCjG3s</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAZv6auxUHDp9w00JP0KNetMEPbUYfBvhw</string>
     <string name="google_storage_bucket" translatable="false">telstrasalesforce.appspot.com</string>
     <string name="oauthRedirectURI">https://telstralready--RETAILPOC.cs57.my.salesforce.com/services/oauth2/success</string>
     <string name="oauth_display_type">touch</string>

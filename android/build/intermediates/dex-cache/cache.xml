@@ -3,39 +3,21 @@
 
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_d4e8abdd678efdde297a8b563dfeec20f87b1942.jar" />
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_54d499791c558b56b2dfa3794c106fb39a7f472b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="3ac08c35419ab7cf9146969de471768dbe502f0f">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-11.0.4_ee5ba5483586c29bbb03cab4cc57f8d862157876.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.0.4_fc19ac947178c48a7f5feb0fec925504a1abf7ef.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_70824698ef66af04c2f1dd1d838b8cf1c763ce1b.jar" />
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.0_ea668caae480c929bf6273fd1d12d22be0ceaa42.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,12 +30,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="eea424e61a0c85b93a0e477565314a58136abaea">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-11.0.4_cd316869c02bd986825380ab39edf903f863d465.jar" />
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-10.0.1_619e616546b3033ea0822d3d4fbce694d9f27c38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-multidex-1.0.1_7cd1ef5de10d983a35e6a75a6899d2772dac4d7e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6e28ed38454d735f71aa15eae4beb136017f9d20.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,24 +66,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5b429c146094a612134910688d169ec08deeefb">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.0.4_de044e2a5e3c95a9fcc750558751b61f44dd150e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7c24e2e9773fb498e390ce973db382c3ddcf748e">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-11.0.4_2101b3e455af5d9f461f15ce551a1dd34ff52330.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/pato/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
@@ -93,12 +75,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.0.4_ad365b6fc66d171fbee3b43502669aa7cdef9996.jar" />
+        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-10.0.1_7f13c6197e3055f6e4e5abefe4eb7b3ca6de2d64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.0_6c4ba23681916b17d377ce80bc155808dbca34e5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,12 +111,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_a070adffdc24c194abda8c0f130137f2081fb75a.jar" />
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.0.1_00ba341ed1c59cad610019ea4e9c9a2a0a5d6300.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,39 +129,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="e1625e48a836779b5fa141d22e5d05563aaccc9a">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.0.4_f2992bb91f2c7870d5d2d683935b9c188442e54d.jar" />
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_daa76ad00a1553bf7899246f1389b2d7db95a514.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="fc3036436defd3070337b7191c50a136ebca7f8f">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-11.0.4_9c9b5b68d66606d50de634feee55e3a2619ea672.jar" />
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-10.0.1_07e766576656923786bd718c4a058d0dac53cf64.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.0.4_3314eb3a153d8cafa259a2efbf0eced2f324dc17.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_a8787d508a2b8d09f463528ed681a7294842b56d.jar" />
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-10.0.1_08f1fe8b4d0aa30b0a6d98ec55838ec0b47954d8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -192,12 +174,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.0.4_c8b5e9bde51c57e18e153f4f019f4a00b36a61cc.jar" />
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.0_24746b0fff12d724a8fa0e4ae08934fb3965db5e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_79cec4f4eb0e4b007b926f7f4b65d584aad80923.jar" />
     </item>
     <item
         is-multidex="false"
@@ -207,15 +198,6 @@
         revision="25.0.0"
         sha1="a56c013cdf3af49efec795ebecfc866612f815eb">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/tape-1.2.3_d8303bbb620b3142bb52552a5f08ce93a3ba052f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-perf/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fddbb0a805b0bfd25c4c4dcc6c76227aa46f2301">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-perf-11.0.4_8ecd13fc7ecd1edc8540151a33a1efe375d85d82.jar" />
     </item>
     <item
         is-multidex="false"
@@ -246,15 +228,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dd282bdeaa904c59d77e57dedd7e0a241c9b679d">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-11.0.4_34d911700a0c91b92acd40d3b8256f5539a70141.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SmartStore/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -264,21 +237,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_5d229a404441609981293ad2d52b3a6e46f236fd.jar" />
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_d18c39d08a75c2f5a1b3cf6af3b319f2a0f6d19c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_fcf22be7405c4266b15107cb5db81d9d98dc9295.jar" />
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_058de80a3cb605b0874a4c01dd29089f0221f46c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_f8836d582b8363d3cbb206aad5dd19b8eb99e25e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -291,6 +273,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6f8d8a8e6b0c5016fc4c6d69b867eb3891928600.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra.libs/SalesforceSDK/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -300,21 +291,39 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4b685077cdb08cf7ae8b61afd1fe910e47d91b9a">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-common-11.0.4_f70be53a2a9b5af6d16ac1e4511b765cc1348754.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_6115cebde0eb344cdcb7d748cd2d9ccf8ef04937.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.0_0a99d4e6cb58e03e4373fd68fd52b4b4f578367c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-10.0.1_b4d812ff1c16ecd695def19427a2182efcf78398.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.0_541af86006d2997b7f797444d41d0b76aebebfd1.jar" />
     </item>
     <item
         is-multidex="false"
@@ -345,21 +354,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_2ea8c6e1ced2126bbdaa1c873e73988d0d6881d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.43.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="f66dccf471b94d5d28c54a6b8ca9e1668b0fb0ce">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.43.1_38465d4c34f4927b37b620a2fdcc56ca9b7edd71.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.0_a11d3781870c98f1acef8988173d4e8aadd44e9e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -390,12 +399,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.2.4_4b56e31619ccd322754e21581e98247db5218a6b.jar" />
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-10.0.1_5b9c2a33205120615103352a81a8d67974ca0486.jar" />
     </item>
     <item
         is-multidex="false"
@@ -405,6 +414,15 @@
         revision="25.0.0"
         sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.0_19c9e990113b6c036403a05924950691e7474f78.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.10/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c6792fb346d4f11b5b9e6c1a5df3a99c140a9e70">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/me.leolin-ShortcutBadger-1.1.10_8b87d07bfac6440f791c23e9be4cefe0f6bfb373.jar" />
     </item>
     <item
         is-multidex="false"
@@ -462,24 +480,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d8942ee348aaa9341f08f7e2437063893fe27542">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-11.0.4_7093aced3494e8f7ac9d3b8e802a864ae953fee4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="1b12397bc9f342b29d9e9108978828f99a6da579">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-11.0.4_4cea891ee566fe1eeca90e6f7625458f4e420fa1.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/Telstra/react-native-splash-screen/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -507,12 +507,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/11.0.4/jars/classes.jar"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="b5b6af36bacf1d812cd3dc45f9dcab9ea471ed91">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-11.0.4_fdd99dcf51d3c4299ddfb6d3d6622f2cd24566ed.jar" />
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.0.1_51a5d2c48657319cad800c5fa89e4da591f975de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-10.0.1_a812addd8b6535d12814e7bde2c26405aa1806d8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -522,33 +531,6 @@
         revision="25.0.0"
         sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_a88f8574088677a6b6a5d5877a9f8ba552dcadb2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e7f890dd2539b7f2582f450f0721e2dea6ae510c">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-11.0.4_63ea889a79029b7c714c9b49aca82e1e1e2a7c28.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ed87ccdcb70c17d71ba4e6e4ac16afa62d3c49fb">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.0.4_4d285e9edc2179231f5caa297e1df7c9c8fc5ccc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.0.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f47f4d5bdfd7d7bf330945b8a7ccce4ab437a710">
-        <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-11.0.4_12bc9459e807ac665b0381191e16483de5d8cf78.jar" />
     </item>
 
 </items>

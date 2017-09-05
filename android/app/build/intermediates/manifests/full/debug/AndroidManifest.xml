@@ -14,13 +14,24 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include required permissions for Google Maps API to run. -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- for android -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+    <!-- for Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
@@ -29,11 +40,15 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- TODO: Remove the -sdk-23 tag when the minsdk version is 23 -->
     <uses-permission-sdk-23 android:name="android.permission.USE_FINGERPRINT" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <permission
         android:name="au.com.telstra.permission.C2D_MESSAGE"
@@ -48,48 +63,6 @@
         android:label="@string/app_name"
         android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity"
         android:supportsRtl="true" >
-
-        <!-- <meta-data android:name="com.wix.reactnativenotifications.gcmSenderId" android:value="801121151349\0"/> -->
-        <service
-            android:name="io.invertase.firebase.messaging.MessagingService"
-            android:enabled="true"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <service
-            android:name="io.invertase.firebase.messaging.InstanceIdService"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-
-        <receiver android:name="io.invertase.firebase.messaging.RNFirebaseLocalMessagingPublisher" />
-        <receiver
-            android:name="io.invertase.firebase.messaging.RNFirebaseSystemBootEventReceiver"
-            android:enabled="true"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
-                <category android:name="au.com.telstra" />
-            </intent-filter>
-        </receiver>
-
         <service
             android:name="com.salesforce.androidsdk.push.SFDCGcmListenerService"
             android:exported="false" >
@@ -167,7 +140,26 @@
         <activity
             android:name="com.salesforce.androidsdk.ui.AccountSwitcherActivity"
             android:excludeFromRecents="true"
-            android:theme="@style/SalesforceSDK.ActionBarTheme" />
+            android:theme="@style/SalesforceSDK.ActionBarTheme" /> <!-- Google Play Services Push Registration -->
+        <!--
+            Push notification services and receivers. The 'category' attribute
+            here should match the <app-package-name> attribute.
+        -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="au.com.telstra" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -177,7 +169,6 @@
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
             android:enabled="true"
-            android:exported="true"
             android:permission="android.permission.INSTALL_PACKAGES" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -188,11 +179,6 @@
             android:name="com.google.android.gms.measurement.AppMeasurementService"
             android:enabled="true"
             android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
         <!--
  FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
@@ -205,23 +191,13 @@
             </intent-filter>
         </service>
 
-        <provider
-            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
-            android:authorities="au.com.telstra.firebaseperfprovider"
-            android:exported="false"
-            android:initOrder="101" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
                 <category android:name="au.com.telstra" />
             </intent-filter>

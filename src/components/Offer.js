@@ -83,7 +83,7 @@ class Offer extends Component {
               raised
               backgroundColor="#397af8"
               style={{ marginBottom: 8 }}
-              onPress={this.props.map}
+              onPress={map}
               title="Collect from a nearby store"
             />
             {/* <Button
