@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: "grey",
   }
 });
-
+// this is a new comment
 const Outage = ({ ContactInfo, service, props }) => {
   debugger;
   return (
@@ -39,14 +39,8 @@ const Outage = ({ ContactInfo, service, props }) => {
               )}
             </Text>
             <Text>
-              Account:{" "}
-              {ContactInfo.ContactInfo ? (
-                ContactInfo.ContactInfo.FirstName
-              ) : (
-                "Mr" + "Smith"
-              )}
+              Account: {(ContactInfo.ContactInfo) ? ContactInfo.ContactInfo.Name : " "}
             </Text>
-            {/* <Text>Account: {(ContactInfo.ContactInfo)?ContactInfo.ContactInfo.FirstName:"Mr" + (ContactInfo.ContactInfo && ContactInfo.ContactInfo.FirstName)?ContactInfo.ContactInfo.LastName:"Smith"}</Text> */}
           </View>
           <Text>Service: Home broadband</Text>
           <Text>Status: Interrupted</Text>

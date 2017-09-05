@@ -12,7 +12,7 @@ import Outage from '../components/Outage';
 import Billing from '../components/Billing';
 import Service from '../components/Service';
 import Offer from '../components/Offer';
-//import Map from '../components/Map';
+import Map from '../components/Map';
 import Address from '../components/Address';
 
 export const AppNavigator = StackNavigator({
@@ -25,7 +25,7 @@ export const AppNavigator = StackNavigator({
   Billing: {screen: Billing},
   Service: {screen: Service},
   Offer: {screen: Offer},
- // Map: {screen: Map},
+  Map: {screen: Map},
   Address: {screen: Address}
 },{ headerMode: 'none' });
 

@@ -83,12 +83,13 @@ async function handleOutage(contactId) {
 
 async function handleDetails(contactId) { 
     let cInfo =
-      "Select id, firstname, lastname, Mailingpostalcode from contact where Related_User_Customer__c ='" +
+      "Select id,name,mobilephone,Telstra_Service__c,(select id,name,nbn_Service_Number__c,Telstra_Service_Number__c from services__r) from Contact where Related_User_Customer__c ='" +
       contactId +
       "'";
       return await new Promise(resolve => net.query(cInfo, response => resolve(response.records)));
 }
 
+let contactId = null;
 
 class UserListScreen extends React.Component {
   static propTypes = {
@@ -107,6 +108,23 @@ class UserListScreen extends React.Component {
   }
 
   async componentDidMount() {
+    debugger;
+    Firebase.messaging()
+    .getInitialNotification()
+    .then(notification => {
+      debugger;
+      console.log("Notification which opened the app: ", notification);
+      if (notification.from === `/topics/${contactId}`) {
+        alert("Outage Notification is been identified");
+        this.props.onNavigateToOutage();
+      } else if (notification.from === `/topics/${contactId}`) {
+        alert("Service has been restored");
+        this.props.onNavigateToOffer();
+      }
+      // alert(notification.from);
+      // if (notification.collapse_key) {
+      // }
+    });  
     var that = this;
     oauth.getAuthCredentials(
       () => that.fetchData(), // already logged in
@@ -118,7 +136,7 @@ class UserListScreen extends React.Component {
       }
     );
     const cred = await promisify(oauth.getAuthCredentials)();
-    console.log(cred);
+    //console.log(cred);
     this.setState({ currentUserCred: cred });
     // console.log(AppState);
     // const url = Linking.getInitialURL().then(url => {
@@ -127,36 +145,25 @@ class UserListScreen extends React.Component {
     //   }
     // });
     const contactInfo = await handleDetails(this.state.currentUserCred.userId);
-    const outageInfo =  await handleOutage(this.state.currentUserCred.userId);
+    //const outageInfo =  await handleOutage(this.state.currentUserCred.userId);
     // add cred to obj
     contactInfo[0].currentUserCred = this.state.currentUserCred;
     debugger;
+    contactId = contactInfo[0].Id;
     this.setState({ ContactInfo: contactInfo[0] });
     this.props.onOutage(contactInfo[0]);
-    Firebase.messaging().subscribeToTopic((contactInfo)?contactInfo[0].MailingPostalCode:"3000");
+    // Firebase.messaging().subscribeToTopic((contactInfo)?contactInfo[0].Id:"3000");
+    debugger;
+    Firebase.messaging().subscribeToTopic(contactId);
     //alert("topic set is = " + contactInfo[0].MailingPostalCode);
-    Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
+ //   Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
     //alert("topic set is = " + contactInfo[0].Id);
     SplashScreen.hide();
 
     //this.setState({v:'vak'}, setExtendedData = () => {this.state.v})
   }
   fetchData() {
-    Firebase.messaging()
-    .getInitialNotification()
-    .then(notification => {
-      console.log("Notification which opened the app: ", notification);
-      if (notification.from === "/topics/" + contactInfo[0].MailingPostalCode) {
-        alert("Outage Notification is been identified");
-        this.props.onNavigateToOutage();
-      } else if (notification.from === "/topics/" +contactInfo[0].Id) {
-        alert("Service has been restored");
-        this.props.onNavigateToOffer();
-      }
-      // alert(notification.from);
-      // if (notification.collapse_key) {
-      // }
-    });
+
   }
   closeControlPanel = onItemSelected => {
     this.refs.menu.close();
