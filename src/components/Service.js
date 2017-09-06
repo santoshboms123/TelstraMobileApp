@@ -74,18 +74,19 @@ class Service extends Component {
           }}
         >
           <Text style={styles.textTitle}>Please find help information below for your {DeviceInfo.getBrand()} device.</Text>
-           <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[0].Title}
-                    {/* {
+           <View>
+             {/* <Text>{this.props.ContactInfo.ContactInfo.serviceInfo[0].Title}</Text> */}
+                    {
                       
                       this.props.ContactInfo.ContactInfo.serviceInfo.map((y) => {
                         debugger;
-                            return (<Text>{y.Title}</Text>);
+                            return (<View><Text>{y.Title}</Text><Text>{y.Text__c}</Text></View>);
                         })
-                    } */}
-                    </Text></View> 
-                <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[1].Title}</Text></View> 
+                    }
+                    </View> 
+                {/* <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[1].Title}</Text></View> 
                 <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[2].Title}</Text></View> 
-                <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[3].Title}</Text></View> 
+                <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[3].Title}</Text></View>  */}
         </View>
       </View>
       <View style={styles.display}>

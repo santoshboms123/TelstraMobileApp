@@ -125,14 +125,15 @@ class UserListScreen extends React.Component {
       if (notification.from === `/topics/${contactId}`) {
         alert("Outage Notification is been identified");
         this.props.onNavigateToOutage();
-      } else if (notification.from === `/topics/${contactId}`) {
-        alert("Service has been restored");
-        this.props.onNavigateToOutage();
-      } else {
+      } 
+      // else if (notification.from === `/topics/${contactId}`) {
+      //   alert("Service has been restored");
+      //   this.props.onNavigateToOutage();
+      // } else {
         //this.props.onNavigateToAbout();
         //getActionForPathAndParams('Main');
-        this.props.onNavigateToOutage(); 
-      }
+        //this.props.onNavigateToOutage(); 
+     // }
       // alert(notification.from);
       // if (notification.collapse_key) {
       // }

@@ -134,7 +134,7 @@ ADDED from /Users/pato/Documents/TelstraMobileApp/android/app/src/main/AndroidMa
 	android:label
 		ADDED from /Users/pato/Documents/TelstraMobileApp/android/app/src/main/AndroidManifest.xml:46:7-39
 	android:launchMode
-		ADDED from /Users/pato/Documents/TelstraMobileApp/android/app/src/main/AndroidManifest.xml:47:4-34
+		ADDED from /Users/pato/Documents/TelstraMobileApp/android/app/src/main/AndroidManifest.xml:47:4-35
 	android:theme
 		ADDED from /Users/pato/Documents/TelstraMobileApp/android/app/src/main/AndroidManifest.xml:48:4-62
 	android:name

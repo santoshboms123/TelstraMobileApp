@@ -64,6 +64,7 @@ import io.invertase.firebase.messaging.RNFirebaseMessagingPackage; // Firebase C
 import io.invertase.firebase.perf.RNFirebasePerformancePackage; // Firebase Performance
 import io.invertase.firebase.storage.RNFirebaseStoragePackage; // Firebase Storage
 import com.cboy.rn.splashscreen.SplashScreen; // here
+import com.salesforce.androidsdk.reactnative.ui.SalesforceReactActivity;
 import com.salesforce.androidsdk.ui.SalesforceActivity;
 
 
@@ -105,7 +106,7 @@ public class MainApplication extends Application implements ReactApplication {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		//SplashScreen.show(null);
+		SplashScreen.show(null);
 		SalesforceReactSDKManager.initReactNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);
 		SalesforceReactSDKManager.getInstance().setPushNotificationReceiver(rp);
 //		SalesforceSDKManager.initNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);
