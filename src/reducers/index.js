@@ -16,7 +16,7 @@ import { AppNavigator } from '../navigators/AppNavigator';
 //console.log(AppNavigator);
 const { getActionForPathAndParams, getStateForAction } = AppNavigator.router;
 const initialState = getStateForAction(
-  getActionForPathAndParams('Outage') 
+  getActionForPathAndParams('Main') 
 );
 
 export const name = 'navigation';
@@ -70,10 +70,20 @@ function ContactInfo(state = { ContactInfo: null }, action) {
   }
   return state;
 }
+function ServiceInfo(state = { ServiceInfo: null }, action) {
+  switch (action.type) {
+    case 'ServiceInfo': {
+      const { ServiceInfo } = action;
+      return { ...state, ServiceInfo };
+    }
+  }
+  return state;
+}
 const AppReducer = combineReducers({
   nav: reducer,
   auth,
-  ContactInfo
+  ContactInfo,
+  ServiceInfo
 });
 
 export default AppReducer;

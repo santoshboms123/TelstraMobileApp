@@ -57,6 +57,9 @@ export default function Menu({ onItemSelected }) {
       <View style={styles.avatarContainer}>
         <Image source={require("../../Telstra.png")} style={styles.image} />
       </View>
+      <Text onPress={() => onItemSelected("Main")} style={styles.item}>
+        Home
+      </Text>
       <Text onPress={() => onItemSelected("Roaming")} style={styles.item}>
         Travel Pass
       </Text>
@@ -77,7 +80,7 @@ export default function Menu({ onItemSelected }) {
         <View>
           <Text>© Copyright 2017</Text>
           <Text>Telstra and Salesforce</Text>
-          <Text>POC Version 3.7</Text>
+          <Text>POC Version 1.3.7</Text>
         </View>
       </View>
     </ScrollView>

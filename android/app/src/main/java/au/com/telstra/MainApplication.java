@@ -27,8 +27,12 @@
 package au.com.telstra;
 
 import android.app.Application;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.Manifest;
 
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
@@ -61,6 +65,7 @@ import io.invertase.firebase.perf.RNFirebasePerformancePackage; // Firebase Perf
 import io.invertase.firebase.storage.RNFirebaseStoragePackage; // Firebase Storage
 import com.cboy.rn.splashscreen.SplashScreen; // here
 import com.salesforce.androidsdk.ui.SalesforceActivity;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -100,7 +105,7 @@ public class MainApplication extends Application implements ReactApplication {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		SplashScreen.show(null);
+		//SplashScreen.show(null);
 		SalesforceReactSDKManager.initReactNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);
 		SalesforceReactSDKManager.getInstance().setPushNotificationReceiver(rp);
 //		SalesforceSDKManager.initNative(getApplicationContext(), new ReactNativeKeyImpl(), MainActivity.class);

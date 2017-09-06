@@ -77,7 +77,7 @@ function handleInactive() {
 }
 
 async function handleOutage(contactId) {
-    let cEffectedExt = "Select Name, nbn_Service_Number__c, Telstra_Service_Number__c From Service__c where Subscriber__r.Related_User_Customer__c = '"+contactId+"'";
+    let cEffectedExt = "Select id,name,mobilephone,nbn_node__c,Telstra_Service__c,(select id,name,nbn_Service_Number__c,Telstra_Service_Number__c from services__r) from Contact where Related_User_Customer__c = '"+contactId+"'";
     return await new Promise(resolve => net.query(cEffectedExt, response => resolve(response.records)));
 }  
 
@@ -87,6 +87,14 @@ async function handleDetails(contactId) {
       contactId +
       "'";
       return await new Promise(resolve => net.query(cInfo, response => resolve(response.records)));
+}
+
+async function handleService() {
+  let cEffectedExt =
+  "select Id, Title,subtitle__c, Text__c, UrlName, How_to_Video__c from faq__kav WHERE PublishStatus='online' AND language='en_US'";
+  return await new Promise(resolve =>
+    net.query(cEffectedExt, response => resolve(response.records))
+  );
 }
 
 let contactId = null;
@@ -119,7 +127,11 @@ class UserListScreen extends React.Component {
         this.props.onNavigateToOutage();
       } else if (notification.from === `/topics/${contactId}`) {
         alert("Service has been restored");
-        this.props.onNavigateToOffer();
+        this.props.onNavigateToOutage();
+      } else {
+        //this.props.onNavigateToAbout();
+        //getActionForPathAndParams('Main');
+        this.props.onNavigateToOutage(); 
       }
       // alert(notification.from);
       // if (notification.collapse_key) {
@@ -144,10 +156,13 @@ class UserListScreen extends React.Component {
     //     const route = url.replace(/.*?:\/\//g, "");
     //   }
     // });
-    const contactInfo = await handleDetails(this.state.currentUserCred.userId);
+    debugger;
+    const contactInfo = await handleOutage(this.state.currentUserCred.userId);
     //const outageInfo =  await handleOutage(this.state.currentUserCred.userId);
+    const serviceInfo = await handleService();
     // add cred to obj
     contactInfo[0].currentUserCred = this.state.currentUserCred;
+    contactInfo[0].serviceInfo = serviceInfo;
     debugger;
     contactId = contactInfo[0].Id;
     this.setState({ ContactInfo: contactInfo[0] });
@@ -186,6 +201,9 @@ class UserListScreen extends React.Component {
       case "Address":
         this.props.onNavigateToAddress();
         break;
+      case "Main":
+        this.props.onNavigateToMain();
+        break
     }
   };
   openControlPanel = () => {
@@ -276,6 +294,9 @@ const mapDispatchToProps = dispatch => ({
   },
   onNavigateToAddress: () => {
     dispatch(NavigationActions.navigate({ routeName: "Address" }));
+  },
+  onNavigateToMain: () => {
+    dispatch(NavigationActions.navigate({ routeName: "Main" }));
   },
   onOutage: (ContactInfo) => {
     dispatch({ type: 'ContactInfo', ContactInfo });

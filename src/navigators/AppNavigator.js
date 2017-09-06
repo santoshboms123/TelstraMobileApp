@@ -6,7 +6,7 @@ import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 import LoginScreen from '../components/LoginScreen';
 import MainScreen from '../components/MainScreen';
 import ProfileScreen from '../components/ProfileScreen';
-import About from '../components/About';
+import About from '../components/Service';
 import Roaming from '../components/Roaming';
 import Outage from '../components/Outage';
 import Billing from '../components/Billing';

@@ -8,6 +8,7 @@ import RoamingButton from './RoamingButton';
 import OutageButton from './OutageButton';
 import BillingButton from './BillingButton';
 import { Button } from 'react-native-elements';
+import { Provider, connect } from "react-redux";
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const MainScreen =  ({ dispatch }) => (
+const MainScreen =  ({ dispatch, ContactInfo }) => (
   <View style={styles.container} >
   <View style={styles.display}>
   <View style={{
@@ -35,12 +36,12 @@ const MainScreen =  ({ dispatch }) => (
           source={require('../../Telstra.png')}
           style={styles.image}>
       </Image>
-      <Text style={styles.textTitle}>Welcome @username</Text>
+      <Text style={styles.textTitle}>Hello {(ContactInfo.ContactInfo) ? ContactInfo.ContactInfo.Name : " "}</Text>
   </View>
   </View>
   <RoamingButton style={styles.buttons}/>
-  <OutageButton style={styles.buttons}/>
   <BillingButton style={styles.buttons}/>
+  <OutageButton style={styles.buttons}/>
   <AboutButton style={styles.buttons}/>
   <View style={styles.display}>
   <View style={{
@@ -50,7 +51,7 @@ const MainScreen =  ({ dispatch }) => (
     }}>
   <Text>© Copyright 2017</Text>
   <Text>Telstra and Salesforce</Text>
-  <Text>POC Version 3</Text>
+  <Text>POC Version 1.3.7</Text>
   </View></View>
   </View>
 );
@@ -59,4 +60,20 @@ MainScreen.navigationOptions = {
   title: 'Telstra',
 };
 
-export default MainScreen;
+const mapStateToProps = state => {
+  return {
+    ContactInfo: state.ContactInfo
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  // onNavigateToService: () => {
+  //   dispatch(NavigationActions.navigate({ routeName: "Service" }));
+  // },
+  //service: () => dispatch(NavigationActions.navigate({ routeName: "Service" }))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);
+
+
+//export default MainScreen;

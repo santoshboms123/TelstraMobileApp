@@ -12,13 +12,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
-    justifyContent: "space-between"
+    justifyContent: "center"
   },
   display: {
     backgroundColor: "white"
   },
   title: {
-    backgroundColor: "grey",
+    backgroundColor: "grey"
+  },
+  textText: {
+    color: "black"
+  },
+  textRed: {
+    color: "red"
   }
 });
 // this is a new comment
@@ -38,24 +44,22 @@ const Outage = ({ ContactInfo, service, props }) => {
                 "0003433302"
               )}
             </Text>
-            <Text>
-              Account: {(ContactInfo.ContactInfo) ? ContactInfo.ContactInfo.Name : " "}
+            <Text style={styles.textText}>
+              Account:{" "}
+              {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "}
             </Text>
           </View>
-          <Text>Service: Home broadband</Text>
-          <Text>Status: Interrupted</Text>
-          <Text>Restoring: ASAP</Text>
-          <Text>
-            Hi @Name As your service is currently interrupted we have added free
-            extra data to your account so you can use this mobile to connect
-            your home devices to the internet.
+          <Text style={styles.textText}>Service: Home broadband</Text>
+          <Text style={styles.textText}>
+            Status: <Text style={styles.textRed}>Interrupted</Text>
           </Text>
-          {/* selectedValue={this.state.language}
-  onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})} */}
-          <Picker>
-            <Picker.Item label="Java" value="java" />
-            <Picker.Item label="JavaScript" value="js" />
-          </Picker>
+          <Text style={styles.textText}>Restoring: ASAP</Text>
+          <Text style={styles.textText}>
+            Hi {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "} As
+            your service is currently interrupted we have added free extra data
+            to your account so you can use this mobile to connect your home
+            devices to the internet.
+          </Text>
         </View>
         <Button
           raised

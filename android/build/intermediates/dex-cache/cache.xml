@@ -349,7 +349,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="1d50b1ce05ca25362588970d815b327df9f1f9e8">
+        sha1="327683bea84dcefb2173f9f9c8bb9354729553fe">
         <dex dex="/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/pre-dexed/debug/Telstra.libs-SalesforceReact-unspecified_412bfc3abcacefbd100917ed57bad2e54b5b8bce.jar" />
     </item>
     <item
