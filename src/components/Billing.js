@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flexDirection: 'column',
   },
+  textTitle: {
+      fontSize: 32,
+      color:'black'
+    },
 });
 
 const Billing = () => (
@@ -29,9 +33,7 @@ const Billing = () => (
       justifyContent: 'center',
       alignItems: 'center',
     }}>
-    <Text>{DeviceInfo.getModel}</Text>
-  <Text>Copyright 2017</Text>
-  <Text>Telstra and Salesforce POC</Text>
+  <Text style={styles.textTitle}>Billing TBA</Text>
   </View></View>
   </View>
 

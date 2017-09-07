@@ -7,6 +7,7 @@ import AboutButton from './AboutButton';
 import RoamingButton from './RoamingButton';
 import OutageButton from './OutageButton';
 import BillingButton from './BillingButton';
+import OfferButton from './OfferButton';
 import { Button } from 'react-native-elements';
 import { Provider, connect } from "react-redux";
 
@@ -42,6 +43,7 @@ const MainScreen =  ({ dispatch, ContactInfo }) => (
   <RoamingButton style={styles.buttons}/>
   <BillingButton style={styles.buttons}/>
   <OutageButton style={styles.buttons}/>
+  <OfferButton style={styles.buttons}/>
   <AboutButton style={styles.buttons}/>
   <View style={styles.display}>
   <View style={{
