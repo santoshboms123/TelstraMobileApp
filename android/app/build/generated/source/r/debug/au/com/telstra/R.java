@@ -2416,8 +2416,8 @@ containing a value of this type.
         public static final int notification_bg_normal=0x7f020075;
         public static final int notification_bg_normal_pressed=0x7f020076;
         public static final int notification_icon_background=0x7f020077;
-        public static final int notification_template_icon_bg=0x7f02008d;
-        public static final int notification_template_icon_low_bg=0x7f02008e;
+        public static final int notification_template_icon_bg=0x7f020091;
+        public static final int notification_template_icon_low_bg=0x7f020092;
         public static final int notification_tile_bg=0x7f020078;
         public static final int notify_panel_notification_icon_bg=0x7f020079;
         public static final int sf__edit_icon=0x7f02007a;
@@ -2438,7 +2438,11 @@ containing a value of this type.
         public static final int sf__progress_spinner=0x7f020089;
         public static final int sf__refresh_loader=0x7f02008a;
         public static final int sf__toolbar_background=0x7f02008b;
-        public static final int telstra=0x7f02008c;
+        public static final int src_assets_map1=0x7f02008c;
+        public static final int src_assets_map2=0x7f02008d;
+        public static final int src_assets_map3=0x7f02008e;
+        public static final int src_assets_offer=0x7f02008f;
+        public static final int telstra=0x7f020090;
     }
     public static final class id {
         public static final int Text1=0x7f0d00a0;

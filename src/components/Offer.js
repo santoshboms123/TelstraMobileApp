@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
       color:'black'
     },
     textTitle2: {
-      fontSize: 28,
+      fontSize: 24,
       color:'black'
     },
     padder: {
-      fontSize: 18,
+      fontSize: 16,
       paddingBottom: 8,
       color:'grey'
     }
