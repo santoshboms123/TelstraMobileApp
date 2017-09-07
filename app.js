@@ -123,7 +123,11 @@ class UserListScreen extends React.Component {
       debugger;
       console.log("Notification which opened the app: ", notification);
       if (notification.from === `/topics/${contactId}`) {
-        alert("Outage Notification is been identified");
+        //alert("Outage Notification is been identified");
+        this.props.onNavigateToOffer();
+      } 
+      if (notification.from === "/topics/3000") {
+        //alert("Outage Notification is been identified");
         this.props.onNavigateToOutage();
       } 
       // else if (notification.from === `/topics/${contactId}`) {
