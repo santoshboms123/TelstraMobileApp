@@ -4,6 +4,8 @@ import { Button } from "react-native-elements";
 import DeviceInfo from "react-native-device-info";
 import { Provider, connect } from "react-redux";
 import { StackNavigator, NavigationActions } from "react-navigation";
+import Hr from "react-native-hr";
+
 
 const promisify = fn => (...args) =>
   new Promise((resolve, reject) => fn(...args, resolve, reject));
@@ -12,19 +14,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
-    justifyContent: "center"
+    padding: 8
   },
   display: {
     backgroundColor: "white"
   },
   title: {
-    backgroundColor: "grey"
+    backgroundColor: "grey",
+    padding: 8,
+    color:'white'
+  }, 
+  textTitle: {
+    fontSize: 32,
+    color: 'black'
+  },
+  padder: {
+    paddingBottom: 8
   },
   textText: {
-    color: "black"
+    fontSize: 20,
+    paddingBottom:16,
+    color: 'grey'
   },
   textRed: {
-    color: "red"
+    color: "red",
+    fontWeight: 'bold'
+  },
+  textBolder: {
+    color: "black",
+    fontWeight: 'bold'
   }
 });
 // this is a new comment
@@ -34,7 +52,7 @@ const Outage = ({ ContactInfo, service, props }) => {
     <View style={styles.container}>
       <View style={styles.display}>
         <View>
-          <Text>Service Status</Text>
+          <Text style={styles.textTitle}>Service Status</Text>
           <View style={styles.title}>
             <Text>
               Services:{" "}
@@ -44,31 +62,39 @@ const Outage = ({ ContactInfo, service, props }) => {
                 "0003433302"
               )}
             </Text>
-            <Text style={styles.textText}>
+            <Text style={styles.title}>
               Account:{" "}
               {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "}
             </Text>
           </View>
-          <Text style={styles.textText}>Service: Home broadband</Text>
+          <Text style={styles.textText}>Service: <Text style={styles.textBolder}>Home broadband</Text></Text>
           <Text style={styles.textText}>
             Status: <Text style={styles.textRed}>Interrupted</Text>
           </Text>
-          <Text style={styles.textText}>Restoring: ASAP</Text>
-          <Text style={styles.textText}>
-            Hi {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "} As
-            your service is currently interrupted we have added free extra data
+          <Text style={styles.textText}>Restoring: <Text style={styles.textBolder}>ASAP</Text></Text>
+          <Hr lineColor="#b3b3b3" textColor="steelblue" />
+          <View style={styles.textText}>
+          <View>
+            <Text style={styles.textText}>Hi {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "}</Text>
+            </View>
+            <View>
+            <Text style={styles.textText}>As your service is currently interrupted we have added free extra data
             to your account so you can use this mobile to connect your home
-            devices to the internet.
-          </Text>
+            devices to the internet.</Text>
+            </View>
+            <View>
+            <Text style={styles.textText}>We aplogoies for the invconenience and are working to get the service restored as soon as poissible.</Text>
+            </View>
+          </View>
         </View>
-        <Button
+      </View>
+      <Button
           raised
           backgroundColor="#397af8"
           style={{ marginBottom: 8 }}
           onPress={service}
-          title="Related help and support"
+          title="Get help connecting to your mobile"
         />
-      </View>
     </View>
   );
 };

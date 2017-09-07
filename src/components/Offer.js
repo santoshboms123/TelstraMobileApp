@@ -4,6 +4,7 @@ import { Button } from "react-native-elements";
 import DeviceInfo from "react-native-device-info";
 import { Provider, connect } from "react-redux";
 import { StackNavigator, NavigationActions } from "react-navigation";
+import Hr from "react-native-hr";
 
 const promisify = fn => (...args) =>
   new Promise((resolve, reject) => fn(...args, resolve, reject));
@@ -12,18 +13,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
-    justifyContent: 'center',
+    justifyContent: "space-between",
+    padding: 8
   },
   display: {
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
   title: {
-    backgroundColor: "grey",
+    backgroundColor: "black",
   },
   textTitle: {
-      fontSize: 32,
-      color: 'black'
+      fontSize: 32
     },
+    padder: {
+      paddingBottom: 8
+    }
 });
 // this is a new comment
 const Offer = ({ ContactInfo, service, props, map }) => {
@@ -33,24 +37,41 @@ const Offer = ({ ContactInfo, service, props, map }) => {
       <View style={styles.display}>
         <View>
           <Text style={styles.textTitle}>Offer</Text>
-          <Text>
-            Upgrade your modem for free Hi {(ContactInfo.ContactInfo) ? ContactInfo.ContactInfo.Name : " "} To avoid being affected
+          <Hr lineColor="#b3b3b3" textColor="steelblue" />
+          <View >
+        <Image source={require("../assets/offer.png")}/>
+      </View>
+          <Hr lineColor="#b3b3b3" textColor="steelblue" />
+          <View>
+            <Text style={styles.textTitle}>Upgrade your modem for free</Text> 
+          </View>
+          <View>
+            <Text style={styles.padder}>Hi {(ContactInfo.ContactInfo) ? ContactInfo.ContactInfo.Name : " "} </Text>
+          </View>
+          <View>
+          <Text style={styles.padder}>To avoid being affected
             by network outages again, we are offering you an upgrade to the
-            Telstra Gateway Frontier for free. With hybrid technology, the
+            Telstra Gateway Frontier for free. </Text>
+          </View>
+          <View>
+            <Text style={styles.padder}>With hybrid technology, the
             all-in one modem combines the power of Telstra’s home and mobile
-            networks for a more reliable connection. If the broadband network
+            networks for a more reliable connection.</Text> 
+          </View>
+          <View>
+            <Text style={styles.padder}>If the broadband network
             experiences and outage the modem will automatically switch to our 4G
-            network.
-          </Text>
+            network.</Text>
+          </View>
         </View>
-        <Button
+      </View>
+      <Button
           raised
           backgroundColor="#397af8"
           style={{ marginBottom: 8 }}
           onPress={map}
           title="Collect from a nearby store"
         />
-      </View>
     </View>
   );
 };
