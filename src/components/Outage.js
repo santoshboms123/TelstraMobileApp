@@ -16,27 +16,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     padding: 8
   },
-  display: {
-    backgroundColor: "white"
-  },
   title: {
     backgroundColor: "grey",
-    padding: 8,
-    color:'white'
+    padding: 8,  
   }, 
   textTitle: {
     fontSize: 32,
     color: 'black'
   },
-  padder: {
-    paddingBottom: 8
-  },
-  textText: {
-    fontSize: 20,
-    paddingBottom:16,
-    color: 'grey'
+  title2: {
+    fontSize: 18,
+    color: 'black',
+    padding: 8, 
   },
   textRed: {
+    fontSize: 22,
     color: "red",
     fontWeight: 'bold'
   },
@@ -50,11 +44,11 @@ const Outage = ({ ContactInfo, service, props }) => {
   debugger;
   return (
     <View style={styles.container}>
-      <View style={styles.display}>
+      <View>
         <View>
           <Text style={styles.textTitle}>Service Status</Text>
-          <View style={styles.title}>
-            <Text>
+          <View>
+            <Text style={styles.title}>
               Services:{" "}
               {ContactInfo.ContactInfo ? (
                 ContactInfo.ContactInfo.Id
@@ -67,23 +61,23 @@ const Outage = ({ ContactInfo, service, props }) => {
               {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "}
             </Text>
           </View>
-          <Text style={styles.textText}>Service: <Text style={styles.textBolder}>Home broadband</Text></Text>
-          <Text style={styles.textText}>
+          <Text style={styles.title2}>Service: <Text style={styles.textBolder}>Home broadband</Text></Text>
+          <Text style={styles.title2}>
             Status: <Text style={styles.textRed}>Interrupted</Text>
           </Text>
-          <Text style={styles.textText}>Restoring: <Text style={styles.textBolder}>ASAP</Text></Text>
+          <Text style={styles.title2}>Restoring: <Text style={styles.textBolder}>ASAP</Text></Text>
           <Hr lineColor="#b3b3b3" textColor="steelblue" />
-          <View style={styles.textText}>
+          <View >
           <View>
-            <Text style={styles.textText}>Hi {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "}</Text>
+            <Text style={styles.title2}>Hi {ContactInfo.ContactInfo ? ContactInfo.ContactInfo.Name : " "}</Text>
             </View>
             <View>
-            <Text style={styles.textText}>As your service is currently interrupted we have added free extra data
+            <Text style={styles.title2}>As your service is currently interrupted we have added free extra data
             to your account so you can use this mobile to connect your home
             devices to the internet.</Text>
             </View>
             <View>
-            <Text style={styles.textText}>We aplogoies for the invconenience and are working to get the service restored as soon as poissible.</Text>
+            <Text style={styles.title2}>We aplogoies for the invconenience and are working to get the service restored as soon as poissible.</Text>
             </View>
           </View>
         </View>

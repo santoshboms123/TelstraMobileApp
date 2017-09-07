@@ -171,6 +171,7 @@ class UserListScreen extends React.Component {
     // Firebase.messaging().subscribeToTopic((contactInfo)?contactInfo[0].Id:"3000");
     debugger;
     Firebase.messaging().subscribeToTopic(contactId);
+    Firebase.messaging().subscribeToTopic("3000");
     //alert("topic set is = " + contactInfo[0].MailingPostalCode);
  //   Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
     //alert("topic set is = " + contactInfo[0].Id);

@@ -67,10 +67,10 @@ export default function Menu({ onItemSelected }) {
         My bills
       </Text>
       <Text onPress={() => onItemSelected("Outage")} style={styles.item}>
-        Outage
+        Service status
       </Text>
       <Text onPress={() => onItemSelected("Offer")} style={styles.item}>
-        Offer
+        Our offers
       </Text>
       <Text onPress={() => onItemSelected("About")} style={styles.item}>
         Help and support

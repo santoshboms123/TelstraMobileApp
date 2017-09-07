@@ -23,10 +23,17 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
   },
   textTitle: {
-      fontSize: 32
+      fontSize: 32,
+      color:'black'
+    },
+    textTitle2: {
+      fontSize: 28,
+      color:'black'
     },
     padder: {
-      paddingBottom: 8
+      fontSize: 18,
+      paddingBottom: 8,
+      color:'grey'
     }
 });
 // this is a new comment
@@ -43,7 +50,7 @@ const Offer = ({ ContactInfo, service, props, map }) => {
       </View>
           <Hr lineColor="#b3b3b3" textColor="steelblue" />
           <View>
-            <Text style={styles.textTitle}>Upgrade your modem for free</Text> 
+            <Text style={styles.textTitle2}>Upgrade your modem for free</Text> 
           </View>
           <View>
             <Text style={styles.padder}>Hi {(ContactInfo.ContactInfo) ? ContactInfo.ContactInfo.Name : " "} </Text>

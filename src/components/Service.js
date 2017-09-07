@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Image, Text, FlatList } from "react-native";
+import { StyleSheet, View, Image, Text, FlatList, Dimensions } from "react-native";
 import { Button } from "react-native-elements";
 import DeviceInfo from "react-native-device-info";
 //import RelatedHelpButton from './RelatedHelpButton.js'
 import { oauth, net } from "react-native-force";
 import { Provider, connect } from "react-redux";
+import Hr from "react-native-hr";
 
 const promisify = fn => (...args) =>
   new Promise((resolve, reject) => fn(...args, resolve, reject));
@@ -13,11 +14,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
-    flexDirection: "column"
+    flexDirection: "column",
+    alignSelf: 'stretch',
+    padding: 8
   },
   textTitle: {
       fontSize: 32,
-      color: 'black'
+      color: 'black',
+      alignSelf: 'stretch',
+      padding: 8
+    },
+    textTitle2: {
+      fontSize: 22,
+      color: 'grey',
+      alignSelf: 'stretch',
+      padding: 8
     },
 });
 
@@ -63,6 +74,7 @@ class Service extends Component {
   }
 //const Service = () => {
   debugger;
+   //w = Dimensions.get('window').width;
    //showHelp = "";//handleService();
    render() {
     return (<View style={styles.container}>
@@ -73,16 +85,28 @@ class Service extends Component {
             alignItems: "center"
           }}
         >
+        <View style={styles.avatarContainer}>
+        <Image source={require("../../Telstra.png")} style={styles.image} />
+      </View>
           <Text style={styles.textTitle}>Please find help information below for your {DeviceInfo.getBrand()} device.</Text>
            <View>
-             {/* <Text>{this.props.ContactInfo.ContactInfo.serviceInfo[0].Title}</Text> */}
-                    {
+             <Text style={{width: Dimensions.get('window').width}} >INFORMATION</Text>
+             <Text style={styles.textTitle2}>{this.props.ContactInfo.ContactInfo.serviceInfo[0].Title}</Text>
+             <Hr lineColor="#b3b3b3" textColor="steelblue" />
+             <Text style={styles.textTitle2}>{this.props.ContactInfo.ContactInfo.serviceInfo[0].subtitle__c}</Text>
+             <Hr lineColor="#b3b3b3" textColor="steelblue" />
+             <Text style={styles.textTitle2}>{this.props.ContactInfo.ContactInfo.serviceInfo[0].Text__c}</Text>
+             <Hr lineColor="#b3b3b3" textColor="steelblue" />
+             <Text style={styles.textTitle2}>{this.props.ContactInfo.ContactInfo.serviceInfo[0].UrlName}</Text>
+             <Hr lineColor="#b3b3b3" textColor="steelblue" />
+             {/* <Text style={styles.textTitle2}>{this.props.ContactInfo.ContactInfo.serviceInfo[0].How_to_Video__c}</Text> */}
+                    {/* {
                       
                       this.props.ContactInfo.ContactInfo.serviceInfo.map((y) => {
                         debugger;
                             return (<View><Text>{y.Title}</Text><Text>{y.Text__c}</Text></View>);
                         })
-                    }
+                    } */}
                     </View> 
                 {/* <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[1].Title}</Text></View> 
                 <View><Text>{this.props.ContactInfo.ContactInfo.serviceInfo[2].Title}</Text></View> 

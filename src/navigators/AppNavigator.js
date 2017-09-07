@@ -13,6 +13,8 @@ import Billing from '../components/Billing';
 import Service from '../components/Service';
 import Offer from '../components/Offer';
 import Map from '../components/Map';
+import Map2 from '../components/Map2';
+import Map3 from '../components/Map3';
 import Address from '../components/Address';
 
 export const AppNavigator = StackNavigator({
@@ -26,6 +28,8 @@ export const AppNavigator = StackNavigator({
   Service: {screen: Service},
   Offer: {screen: Offer},
   Map: {screen: Map},
+  Map2: {screen: Map2},
+  Map3: {screen: Map3},
   Address: {screen: Address}
 },{ headerMode: 'none' });
 
