@@ -53,7 +53,7 @@ const MainScreen =  ({ dispatch, ContactInfo }) => (
     }}>
   <Text>© Copyright 2017</Text>
   <Text>Telstra and Salesforce</Text>
-  <Text>POC Version 1.3.7</Text>
+  <Text>POC Version 1.3.8</Text>
   </View></View>
   </View>
 );

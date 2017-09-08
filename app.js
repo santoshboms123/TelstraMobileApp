@@ -117,6 +117,18 @@ class UserListScreen extends React.Component {
 
   async componentDidMount() {
     debugger;
+    Firebase.messaging().onMessage(notification => {
+      debugger;
+     // console.log(notification);    
+      if (notification.priority === "Outage") {
+        //alert("Outage Notification is been identified");
+        this.props.onNavigateToOutage();
+      } 
+      if (notification.priority === "Restored") {
+        //alert("Outage Notification is been identified");
+        this.props.onNavigateToOffer();
+      } 
+    });
     Firebase.messaging()
     .getInitialNotification()
     .then(notification => {
@@ -176,6 +188,7 @@ class UserListScreen extends React.Component {
     debugger;
     Firebase.messaging().subscribeToTopic(contactId);
     Firebase.messaging().subscribeToTopic("3000");
+    Firebase.messaging().subscribeToTopic("Restored");
     //alert("topic set is = " + contactInfo[0].MailingPostalCode);
  //   Firebase.messaging().subscribeToTopic(contactInfo[0].Id);
     //alert("topic set is = " + contactInfo[0].Id);
