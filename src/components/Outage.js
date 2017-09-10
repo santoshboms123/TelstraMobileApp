@@ -77,7 +77,7 @@ const Outage = ({ ContactInfo, service, props }) => {
             devices to the internet.</Text>
             </View>
             <View>
-            <Text style={styles.title2}>We aplogoies for the invconenience and are working to get the service restored as soon as poissible.</Text>
+            <Text style={styles.title2}>We apologise for the inconvenience and are working to get the service restored as soon as possible.</Text>
             </View>
           </View>
         </View>

@@ -1,4 +1,4 @@
-#Fri Sep 08 13:26:57 AEST 2017
+#Fri Sep 08 16:08:04 AEST 2017
 base.0=/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/pato/Documents/TelstraMobileApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
