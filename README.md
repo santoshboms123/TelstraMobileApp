@@ -12,18 +12,18 @@ Please only run NPM and not Yarn.
 
 Main dependencies are:
 
-Markup : * react
-         * react-native 
-         * react-native-appstate-listener 
-         * react-native-device-info 
-         * react-native-elements 
-         * react-native-firebase, 
-         * react-native-force = https://github.com/forcedotcom/SalesforceMobileSDK-ReactNative.git#v5.2.0
-         * react-native-scalable-image 
-         * react-native-simple-drawer 
-         * react-navigation 
-         * react-redux 
-         * redux
+* react
+* react-native 
+* react-native-appstate-listener 
+* react-native-device-info 
+* react-native-elements 
+* react-native-firebase, 
+* react-native-force = https://github.com/forcedotcom/SalesforceMobileSDK-ReactNative.git#v5.2.0
+* react-native-scalable-image 
+* react-native-simple-drawer 
+* react-navigation 
+* react-redux 
+* redux
 
 #### Note: ####
 
