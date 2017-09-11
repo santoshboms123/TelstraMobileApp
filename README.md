@@ -1,5 +1,8 @@
 # TelstraMobileApp
 
+## About
+This is a project that is a proof of concept to display on how Salesforce works with Mobile in this case Android. This is Lab work only, if a situation is needed for production I would air on the side of caution until a cleanup, comments added, bug fixes done and unit tests are implemented.
+
 git clone https://github.com/santoshboms123/TelstraMobileApp.git
 
 npm install
