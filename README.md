@@ -28,6 +28,26 @@ Main dependencies are:
 * react-redux 
 * redux
 
+#### Example of JSON Push ####
+
+```javascript
+{ 
+ "to": "/topics/3000",  
+ "notification" : {
+ "body" : "Outage",
+ "content_available" : true,
+ "priority" : "Outage",
+ "title" : "Outage"
+ },
+ "data" : {
+ "body" : "Outage!",
+ "content_available" : true,
+ "priority" : "Outage",
+ "title" : "Outage"
+ }
+}
+```
+
 #### Note: ####
 
 Force SDK and React Native versions are fixed, please review package.js
