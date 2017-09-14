@@ -73,6 +73,10 @@ Restored:
 Front screen example for Version 1.3.9
 ![alt text](https://github.com/santoshboms123/TelstraMobileApp/blob/master/FrontScreen.png)
 
+Structre: React Native, Redux and SF Mobile SDK
+
+![alt text](https://github.com/santoshboms123/TelstraMobileApp/blob/master/structure.png)
+
 #### Note: ####
 
 Force SDK and React Native versions are fixed, please review package.js
