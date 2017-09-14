@@ -31,6 +31,9 @@ Main dependencies are:
 #### Example of JSON Push ####
 
 ```javascript
+
+Outage:
+
 { 
  "to": "/topics/3000",  
  "notification" : {
@@ -46,6 +49,25 @@ Main dependencies are:
  "title" : "Outage"
  }
 }
+
+Restored:
+
+{ 
+ "to": "/topics/Restored",  
+ "notification" : {
+ "body" : "Restored",
+ "content_available" : true,
+ "priority" : "Restored",
+ "title" : "Restored"
+ },
+ "data" : {
+ "body" : "Restored!",
+ "content_available" : true,
+ "priority" : "Restored",
+ "title" : "Restored"
+ }
+}
+
 ```
 
 Front screen example for Version 1.3.9
