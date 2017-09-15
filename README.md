@@ -104,3 +104,7 @@ npm run-script bundle-android
 npm run-script build
 
 Then the path for the .apk is: /Users/yourcomputer/Documents/TelstraMobileApp/android/app/build/outputs/apk/app-debug.apk
+
+#### On running it in the simulator ####
+
+First you need to run the simulator from Android Studio, once it is running you then run the command line "react-native run-android"
