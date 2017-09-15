@@ -108,3 +108,5 @@ Then the path for the .apk is: /Users/yourcomputer/Documents/TelstraMobileApp/an
 #### On running it in the simulator ####
 
 First you need to run the simulator from Android Studio, once it is running you then run the command line "react-native run-android"
+
+https://facebook.github.io/react-native/docs/running-on-device.html
