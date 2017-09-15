@@ -96,3 +96,11 @@ https://github.com/jhen0409/react-native-debugger
 https://www.sourcetreeapp.com/
 
 https://brew.sh/
+
+#### On building the .apk ####
+
+npm run-script bundle-android
+
+npm run-script build
+
+Then the path for the .apk is: /Users/yourcomputer/Documents/TelstraMobileApp/android/app/build/outputs/apk/app-debug.apk
